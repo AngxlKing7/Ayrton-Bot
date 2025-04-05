@@ -111,7 +111,7 @@ npm start
 
 ### **`🔗 CODESPACES`**
 
-[`CREAR SERVIDOR`]([https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=960033255&ref=master&geo=UsWest](https://github.com/codespaces/new?skip_quickstart=true&machine=standardLinux32gb&repo=960972213&ref=master&geo=UsWest))
+[`CREAR SERVIDOR`]([https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=960033255&ref=master&geo=UsWest](https://github.com/codespaces/new?skip_quickstart=true&machine=standardLinux32gb&repo=960972213&ref=master&geo=UsWest)
 
 ---
 ### **`🔗 Enlaces útiles`**
