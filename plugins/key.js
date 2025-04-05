@@ -8,7 +8,7 @@ import { spawn, exec, execSync } from 'child_process'
 const format = sizeFormatter({ std: 'JEDEC', decimalPlaces: 2, keepTrailingZeroes: false, render: (literal, symbol) => `${literal} ${symbol}B` })
 
 var handler = async (m, { conn, args }) => {
-    await m.react('🤍')
+    await m.react('🥵')
 
     let timestamp = speed()
     let latensi = speed() - timestamp
@@ -40,9 +40,9 @@ var handler = async (m, { conn, args }) => {
 
 handler.help = ['key']
 handler.tags = ['bot']
-handler.command = ['keyra', 'key', 'keysaurio', 'lesbian', 'lesbiana']
+handler.command = ['keyra', 'key', 'keysaurio', 'lesbiank', 'lesbianakey']
 
-handler.register = true
+handler.register = false
 
 export default handler
 
