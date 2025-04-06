@@ -124,7 +124,7 @@ let handler = async (m, { conn, text }) => {
     const results = await pins(text);
     if (!results || results.length === 0) return conn.reply(m.chat, `No se encontraron resultados para "${text}".`, m);
 
-    const maxImages = Math.min(results.length, 1);
+    const maxImages = Math.min(results.length, 2);
     const medias = [];
 
     for (let i = 0; i < maxImages; i++) {
