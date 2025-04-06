@@ -57,7 +57,7 @@ const ddownr = {
         if (response.data && response.data.success && response.data.progress === 1000) {
           return response.data.download_url;
         }
-        await new Promise(resolve => setTimeout(resolve, 5000));
+        await new Promise(resolve => setTimeout(resolve, 3000));  // Reducir el tiempo de espera
       }
     } catch (error) {
       console.error('Error:', error);
@@ -72,9 +72,8 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
       return conn.reply(m.chat, `🩵 Porfavor Ingresa el nombre de la música para descargar.`, m);
     }
 
-    // Respuesta inicial con emoji de verificación ✅ 
-    await conn.reply(m.chat, 'Ya se esta enviando...', m);
-    
+    // Respuesta inicial con emoji de verificación ✅
+    await conn.reply(m.chat, 'Ya se esta enviando.......', m);
 
     const search = await yts(text);
     if (!search.all || search.all.length === 0) {
@@ -108,35 +107,33 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
       const api = await ddownr.download(url, 'mp3');
       const result = api.downloadUrl;
       await conn.sendMessage(m.chat, { audio: { url: result }, mimetype: "audio/mpeg" }, { quoted: m });
-      return m.reply("Música descargada con éxito.");
+      return m.reply("🩷 disculpa tu Música se a descargada con éxito.");
     } else if (command === 'play2' || command === 'ytmp4') {
-      let sources = [
+      const sources = [
         `https://api.siputzx.my.id/api/d/ytmp4?url=${url}`,
         `https://api.zenkey.my.id/api/download/ytmp4?apikey=zenkey&url=${url}`,
         `https://axeel.my.id/api/download/video?url=${encodeURIComponent(url)}`,
         `https://delirius-apiofc.vercel.app/download/ytmp4?url=${url}`
       ];
 
-      let success = false;
-      for (let source of sources) {
-        try {
-          const res = await fetch(source);
-          const { data, result, downloads } = await res.json();
-          let downloadUrl = data?.dl || result?.download?.url || downloads?.url || data?.download?.url;
+      const fetchSources = sources.map(source => fetch(source).then(res => res.json()));
+      const responses = await Promise.all(fetchSources);
 
-          if (downloadUrl) {
-            success = true;
-            await conn.sendMessage(m.chat, {
-              video: { url: downloadUrl },
-              fileName: `${title}.mp4`,
-              mimetype: 'video/mp4',
-              caption: `${dev}`,
-              thumbnail: thumb
-            }, { quoted: m });
-            break;
-          }
-        } catch (e) {
-          console.error(`Error con la fuente ${source}:`, e.message);
+      let success = false;
+      for (let res of responses) {
+        const { data, result, downloads } = res;
+        let downloadUrl = data?.dl || result?.download?.url || downloads?.url || data?.download?.url;
+
+        if (downloadUrl) {
+          success = true;
+          await conn.sendMessage(m.chat, {
+            video: { url: downloadUrl },
+            fileName: `${title}.mp4`,
+            mimetype: 'video/mp4',
+            caption: `${dev}`,
+            thumbnail: thumb
+          }, { quoted: m });
+          break;
         }
       }
 
