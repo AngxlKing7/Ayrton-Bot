@@ -6,15 +6,16 @@ import { webp2png } from '../lib/webp2mp4.js';
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   let stiker = false;
   try {
-    let q = m.quoted ? m.quoted : m; // Obtiene el mensaje citado si existe, si no el mensaje actual
-    let mime = (q.msg || q).mimetype || q.mediaType || ''; // Obtiene el tipo MIME del mensaje
+    let q = m.quoted ? m.quoted : m;  // Obtén el mensaje citado, si existe, o el mensaje actual.
+    let mime = (q.msg || q).mimetype || q.mediaType || '';  // Obtén el tipo MIME del mensaje.
     
-    if (/webp|image|video/g.test(mime)) { // Verifica si es una imagen, video o webp
-      if (/video/g.test(mime) && (q.msg || q).seconds > 15) { // Si es video, verifica que no supere los 15 segundos
+    // Verifica si el archivo es de tipo imagen, video o webp
+    if (/webp|image|video/g.test(mime)) {
+      if (/video/g.test(mime) && (q.msg || q).seconds > 15) {  // Si es un video, limita la duración.
         return m.reply('¡El video no puede durar más de 15 segundos!');
       }
 
-      let img = await q.download?.(); // Descarga el archivo multimedia (ya sea imagen, video o webp)
+      let img = await q.download?.();  // Descarga el archivo multimedia del mensaje.
       
       if (!img) {
         return conn.reply(m.chat, 'Por favor, envía una imagen o video para hacer un sticker.', m);
@@ -26,26 +27,28 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         const texto1 = packstickers?.text1 || `${global.packsticker}`;
         const texto2 = packstickers?.text2 || `${global.packsticker2}`;
 
-        stiker = await sticker(img, false, texto1, texto2); // Crea el sticker
+        // Crea un sticker a partir de la imagen descargada
+        stiker = await sticker(img, false, texto1, texto2);
       } catch (e) {
         console.error(e);
       } finally {
-        // Si no se pudo crear el sticker, realiza el procesamiento del archivo según el tipo
+        // Si no se pudo crear el sticker, realiza un procesamiento alternativo del archivo.
         if (!stiker) {
           if (/webp/g.test(mime)) {
-            out = await webp2png(img); // Convierte webp a png si es necesario
+            out = await webp2png(img);  // Convierte WEBP a PNG
           } else if (/image/g.test(mime)) {
-            out = await uploadImage(img); // Sube la imagen
+            out = await uploadImage(img);  // Sube la imagen a un servidor
           } else if (/video/g.test(mime)) {
-            out = await uploadFile(img); // Sube el video
+            out = await uploadFile(img);  // Sube el video
           }
-          if (typeof out !== 'string') out = await uploadImage(img);
-          stiker = await sticker(false, out, global.packsticker, global.packsticker2); // Crea el sticker final
+          
+          if (typeof out !== 'string') out = await uploadImage(img);  // Si no es un string, sube la imagen.
+          stiker = await sticker(false, out, global.packsticker, global.packsticker2);  // Crea el sticker.
         }
       }
-    } else if (args[0]) { // Si hay un URL proporcionado
+    } else if (args[0]) {  // Si hay un URL proporcionado en los argumentos
       if (isUrl(args[0])) {
-        stiker = await sticker(false, args[0], global.packsticker, global.packsticker2); // Crea sticker desde URL
+        stiker = await sticker(false, args[0], global.packsticker, global.packsticker2);  // Crea un sticker a partir de un URL
       } else {
         return m.reply('El URL es incorrecto...');
       }
@@ -55,7 +58,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!stiker) stiker = e;
   } finally {
     if (stiker) {
-      conn.sendFile(m.chat, stiker, 'sticker.webp', '', m); // Envía el sticker
+      conn.sendFile(m.chat, stiker, 'sticker.webp', '', m);  // Envía el sticker generado
     } else {
       return conn.reply(m.chat, 'Por favor, envía una imagen o video para hacer un sticker.', m);
     }
@@ -69,7 +72,7 @@ handler.register = true;
 
 export default handler;
 
-// Función para verificar si es un URL válido
+// Función para verificar si un texto es una URL válida.
 const isUrl = (text) => {
   return text.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)(jpe?g|gif|png)/, 'gi'));
 };
