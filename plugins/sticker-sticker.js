@@ -8,13 +8,13 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   try {
     let q = m.quoted ? m.quoted : m; // Obtiene el mensaje citado si existe, si no el mensaje actual
     let mime = (q.msg || q).mimetype || q.mediaType || ''; // Obtiene el tipo MIME del mensaje
+    
     if (/webp|image|video/g.test(mime)) { // Verifica si es una imagen, video o webp
       if (/video/g.test(mime) && (q.msg || q).seconds > 15) { // Si es video, verifica que no supere los 15 segundos
         return m.reply('¡El video no puede durar más de 15 segundos!');
       }
-      
-      // Descarga el archivo multimedia (ya sea imagen, video o webp)
-      let img = await q.download?.();
+
+      let img = await q.download?.(); // Descarga el archivo multimedia (ya sea imagen, video o webp)
       
       if (!img) {
         return conn.reply(m.chat, 'Por favor, envía una imagen o video para hacer un sticker.', m);
