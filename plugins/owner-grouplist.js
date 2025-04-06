@@ -46,7 +46,7 @@ try {
 };
 handler.help = ['groups', 'grouplist'];
 handler.tags = ['owner'];
-handler.command = ['listgrojsjsjsup', 'gruposkdksklista', 'groupksksklist', 'listagrusuusupos']
+handler.command = ['listgroup', 'grupolista', 'grouplist', 'listagrupos']
 handler.rowner = true;
 handler.private = true
 

@@ -20,11 +20,14 @@ var handler = async (m, { conn, args }) => {
 
     let url = args.length > 0 ? args.join(' ') : '' 
 
-    let hora = new Date().getHours()
+    // Hora en la zona de México
+    let horaMX = new Date().toLocaleString("es-MX", { timeZone: "America/Mexico_City", hour: "numeric", hour12: false })
+    horaMX = parseInt(horaMX)
+
     let nombreUsuario = conn.getName(m.sender) || "querido usuario"
-    let saludo = hora < 6 ? `🌙 Buenas noches, ${nombreUsuario}` : 
-                 hora < 12 ? `🌸 Buenos días, ${nombreUsuario}` : 
-                 hora < 19 ? `🌅 Buenas tardes, ${nombreUsuario}` : 
+    let saludo = horaMX < 6 ? `🌙 Buenas noches, ${nombreUsuario}` : 
+                 horaMX < 12 ? `🌸 Buenos días, ${nombreUsuario}` : 
+                 horaMX < 19 ? `🌅 Buenas tardes, ${nombreUsuario}` : 
                  `🌙 Buenas noches, ${nombreUsuario}`
 
     let cpu = await osu.cpu.usage()
@@ -34,7 +37,7 @@ var handler = async (m, { conn, args }) => {
 
     let texto = `
 ╭───────────────❀
-│ ${saludo} 💖
+│ ${saludo} 
 │ 🤖 *Versión:* ${versionBot}
 ╰───────────────❀
 
@@ -62,9 +65,9 @@ ${url ? `📡 *Enlace:* ${url}` : ''}
 
 handler.help = ['ping']
 handler.tags = ['bot']
-handler.command = ['ping', 'speed']
+handler.command = ['ping', 'speed', 'p']
 
-handler.register = true
+handler.register = false
 
 export default handler
 

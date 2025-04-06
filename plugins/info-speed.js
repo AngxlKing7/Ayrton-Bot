@@ -28,7 +28,6 @@ let texto = `${emoji} *${packname}*
 → ${muptime}
 
 💫 *Chats:*
-→ ${chats.length} *Chats privados*
 → ${groups.length} *Grupos*
 
 🏆 *Servidor:*

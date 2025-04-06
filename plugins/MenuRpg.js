@@ -97,7 +97,7 @@ ${leerMas}
 
 handler.help = ['rpg']
 handler.tags = ['main']
-handler.command = ['rpg']
+handler.command = ['rpg128']
 handler.register = false
 export default handler
 

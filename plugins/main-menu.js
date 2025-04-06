@@ -19,7 +19,7 @@ Hola! Soy  *${botname}*  🜲
 Aquí tienes la lista de comandos
 ╭┈ ↷
 │ᰔᩚ Usuario » @${userId.split('@')[0]}
-│✦ Bot » ${(conn.user.jid == global.conn.user.jid ? 'Principal 🜲' : 'Prem Bot')}
+│✦ Bot » ${(conn.user.jid == global.conn.user.jid ? 'Principal 🜲' : 'Sub Bot')}
 │✧ Comandos » ${totalCommands}
 │•——————•Canal Oficial•——————•
 │https://whatsapp.com/channel/0029VbAmwbQBqbr587Zkni1a

@@ -24,11 +24,11 @@ ${greeting} *${name}*, ¿Qué deseas escuchar este día?
 ╭──⬣「 *Herramientas* 」⬣
 │
 │  ≡◦ *Comando 1*
-│  ✦ .play
+│  ✦ #play
 │  ≡◦ *Comando 2*
-│  ✦ .play5 
+│  ✦ #ytaudio
 │  ≡◦ *Comando 3*
-│  ✦ .play4
+│  ✦ #play1
 │ 🩵 Nota de mi owner:
 │ si uno de mis comandos no 
 │ funciona reporta ejemplo 

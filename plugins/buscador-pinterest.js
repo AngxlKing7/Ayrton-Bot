@@ -117,14 +117,14 @@ const pins = async (judul) => {
 };
 
 let handler = async (m, { conn, text }) => {
-  if (!text) return m.reply(`🍫 Ingresa un texto. Ejemplo: .pinterest Crow`);
+  if (!text) return m.reply(`🍫 Ingresa un texto. Ejemplo: #pin Ayrton Senna`);
 
   try {
     m.react('🕒');
     const results = await pins(text);
     if (!results || results.length === 0) return conn.reply(m.chat, `No se encontraron resultados para "${text}".`, m);
 
-    const maxImages = Math.min(results.length, 10);
+    const maxImages = Math.min(results.length, 1);
     const medias = [];
 
     for (let i = 0; i < maxImages; i++) {

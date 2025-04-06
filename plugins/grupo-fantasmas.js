@@ -52,7 +52,7 @@ break
 
 }
 handler.tags = ['grupo']
-handler.command = ['fantasmas', 'kickfantasmas']
+handler.command = ['fantasmas', 'kickfantasmas', 'inactivos']
 handler.group = true
 handler.botAdmin = true
 handler.admin = true

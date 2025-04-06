@@ -125,7 +125,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   } 
 };
 
-handler.command = ['ytaudio'];
+handler.command = ['play5'];
 handler.help = ['play5'];
 handler.tags = ['downloader'];
 handler.group = true;

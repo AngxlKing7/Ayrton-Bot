@@ -11,7 +11,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 
   const videoInfo = search.all[0];
-  const body = `「✦」Descargando *<${videoInfo.title}>*\n\n> ✦ canal » *${videoInfo.author.name || 'Desconocido'}*\n> ✰ vistas » *${videoInfo.views}*\n> ⴵ duración » *${videoInfo.timestamp}*\n> ✐ publicado » *${videoInfo.ago}*\n> 🜸 link » ${videoInfo.url}\n`;
+  const body = `「✦」Descargando *<${videoInfo.title}>*\n\n> ✐ canal » *${videoInfo.author.name || 'Desconocido'}*\n> ✰ vistas » *${videoInfo.views}*\n> ⴵ duración » *${videoInfo.timestamp}*\n> ✐ publicado » *${videoInfo.ago}*\n> 🜸 link » ${videoInfo.url}\n`;
 
   if (command === 'play' || command === 'play2' || command === 'playvid') {
     await conn.sendMessage(m.chat, {
@@ -37,7 +37,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     }, { quoted: fkontak });
     m.react('🕒');
 
-  } else if (command === 'yta' || command === 'ytmp3') {
+  } else if (command === 'yta' || command === 'ytmp3' || command === 'ytaudio') {
     m.react(rwait);
     let audio;
     try {
@@ -112,7 +112,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 
   const videoInfo = search.all[0];
-  const body = `「✦」descargando *<${videoInfo.title}>*\n\n> ✦ canal » *${videoInfo.author.name || 'Desconocido'}*\n> ✰ vistas » *${videoInfo.views}*\n> ⴵ duración » *${videoInfo.timestamp}*\n> ✐ publicado » *${videoInfo.ago}*\n> 🜸 link » ${videoInfo.url}\n`;
+  const body = `「✦」descargando *<${videoInfo.title}>*\n\n> ✐ canal » *${videoInfo.author.name || 'Desconocido'}*\n> ✰ vistas » *${videoInfo.views}*\n> ⴵ duración » *${videoInfo.timestamp}*\n> ✐ publicado » *${videoInfo.ago}*\n> 🜸 link » ${videoInfo.url}\n`;
   
   if (Object.keys(global.play).length >= 100) global.play = {};
   
@@ -163,10 +163,10 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 };
 
 handler.help = ['play', 'playvid', 'ytv', 'ytmp4', 'yta', 'play2', 'ytmp3'];
-handler.command = ['play', 'playvid', 'ytv', 'ytmp4', 'yta', 'play2', 'ytmp3'];
+handler.command = ['play', 'playvid', 'ytv', 'ytmp4', 'yta', 'play2', 'ytmp3', 'ytaudio'];
 handler.tags = ['dl'];
 handler.group = true;
-handler.register = true;
+handler.register = false;
 
 export default handler;
 

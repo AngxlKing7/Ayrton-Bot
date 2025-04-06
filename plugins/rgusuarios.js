@@ -10,7 +10,7 @@ let handler = async function (m, { conn }) {
   message += `🌸 Total registrados: *${totalRegistrados}* usuarios\n`
   message += `🌼 Total en la base: *${totalreg}* usuarios\n`
   message += `╰───────────────╯\n`
-  message += `Gracias por confiar en 2B.`
+  message += `Gracias por confiar en AB7.`
 
   await m.reply(message)
 }

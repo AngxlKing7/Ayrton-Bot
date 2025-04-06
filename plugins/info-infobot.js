@@ -16,7 +16,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let totalf = Object.values(global.plugins).filter((v) => v.help && v.tags).length
 
     // Cambiar nombre de servidor según si es principal o sub-bot
-    let serverName = bot.isSubBot ? 'Ayrton-2 (sub-bot)' : 'Ayrton-1'; // Si es sub-bot, se pone 'Ayrton-2 (sub-bot)', si es principal 'Ayrton-1'
+    let serverName = bot.isSubBot ? 'Ayrton-2' : 'Ayrton-1'; // Si es sub-bot, se pone 'Ayrton-2 (sub-bot)', si es principal 'Ayrton-1'
 
     let info = `✿  *Informacion de ${global.botname}*\n\n`
     info += `✎˚₊· ͟͟͞͞➳❥ *Prefijo* : [  ${usedPrefix}  ]\n`

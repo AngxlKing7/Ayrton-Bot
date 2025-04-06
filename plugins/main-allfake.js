@@ -39,7 +39,7 @@ global.listo = '❮✦❯ *Aquí tienes ฅ^•ﻌ•^ฅ*'
 global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://files.catbox.moe/xr2m6u.jpg')
 
 //Ids channel
-global.canalIdM = ["120363392571425662@newsletter", "120363393500238364@newsletter"]
+global.canalIdM = ["120363402095978084@newsletter", "120363402095978084@newsletter"]
 global.canalNombreM = ["𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭 • Avisos", "𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭 • Update"]
 global.channelRD = await getRandomChannel()
 

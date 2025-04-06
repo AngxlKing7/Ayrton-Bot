@@ -8,9 +8,6 @@ let grupos = `
 ❥ *${namegrupo}*
 > ✿ ${gp1}
 
-❥ *${namecomu}*
-> ✿ ${comunidad1}
-
 *⌒☆⌒☆⌒☆⌒☆⌒☆⌒☆⌒☆⌒☆*
 
 ⚘ ¿El enlace no funciona? No te preocupes, entra aquí:
@@ -18,10 +15,7 @@ let grupos = `
 ❥ *${namechannel}*
 > ✿ ${channel}
 
-❥ *${namechannel2}*
-> ✿ ${channel2}
-
-> *Con cariño, tu Neko dev* ${dev}
+> *Con cariño, tu Ayrton Dev* ${dev}
 `
 
 const imageUrl = 'http://imgfz.com/i/AvjqxfO.jpeg'

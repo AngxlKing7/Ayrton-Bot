@@ -32,7 +32,6 @@ ${description}
 ✦ Edad » ${user.age || 'Desconocida'}
 ♛ *Cumpleaños* » ${cumpleanos}
 ⚥ *Género* » ${genero}
-♡ *Casado con* » ${pareja}
 
 ☆ *Experiencia* » ${exp.toLocaleString()}
 ❖ *Nivel* » ${nivel}
