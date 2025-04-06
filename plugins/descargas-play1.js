@@ -73,6 +73,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 
     // Respuesta inicial con emoji de verificación ✅ 
+    await conn.reply(m.chat, 'Ya se esta enviando...', m);
     
 
     const search = await yts(text);
