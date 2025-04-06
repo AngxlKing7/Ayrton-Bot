@@ -12,8 +12,10 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       if (/video/g.test(mime) && (q.msg || q).seconds > 15) { // Si es video, verifica que no supere los 15 segundos
         return m.reply('¡El video no puede durar más de 15 segundos!');
       }
-      let img = await q.download?.(); // Descarga el archivo multimedia
-
+      
+      // Descarga el archivo multimedia (ya sea imagen, video o webp)
+      let img = await q.download?.();
+      
       if (!img) {
         return conn.reply(m.chat, 'Por favor, envía una imagen o video para hacer un sticker.', m);
       }
@@ -28,10 +30,15 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       } catch (e) {
         console.error(e);
       } finally {
+        // Si no se pudo crear el sticker, realiza el procesamiento del archivo según el tipo
         if (!stiker) {
-          if (/webp/g.test(mime)) out = await webp2png(img); // Convierte webp a png si es necesario
-          else if (/image/g.test(mime)) out = await uploadImage(img); // Sube la imagen
-          else if (/video/g.test(mime)) out = await uploadFile(img); // Sube el video
+          if (/webp/g.test(mime)) {
+            out = await webp2png(img); // Convierte webp a png si es necesario
+          } else if (/image/g.test(mime)) {
+            out = await uploadImage(img); // Sube la imagen
+          } else if (/video/g.test(mime)) {
+            out = await uploadFile(img); // Sube el video
+          }
           if (typeof out !== 'string') out = await uploadImage(img);
           stiker = await sticker(false, out, global.packsticker, global.packsticker2); // Crea el sticker final
         }
