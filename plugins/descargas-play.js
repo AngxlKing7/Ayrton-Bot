@@ -47,7 +47,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 
     await conn.reply(m.chat, infoMessage, m, JT)
 
-    if (command === 'play' || command === 'yta' || command === 'ytmp3') {
+    if (command === 'play' || command === 'yta' || command === 'ytmp3' || command === 'ytaudio') {
       try {
         const api = await (await fetch(`https://api.vreden.my.id/api/ytmp3?url=${url}`)).json()
         const resulta = api.result
