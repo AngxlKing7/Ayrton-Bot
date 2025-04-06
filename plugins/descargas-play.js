@@ -37,7 +37,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     }, { quoted: fkontak });
     m.react('🕒');
 
-  } else if (command === 'yta' || command === 'ytmp3' || command === 'ytaudio') {
+  } else if (command === 'yta' || command === 'ytmp3') {
     m.react(rwait);
     let audio;
     try {
@@ -81,7 +81,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 };
 
 handler.help = ['play', 'playvid', 'ytv', 'ytmp4', 'yta', 'play2', 'ytmp3'];
-handler.command = ['play', 'playvid', 'ytv', 'ytmp4', 'yta', 'play2', 'ytmp3'];
+handler.command = ['play', 'playvid', 'ytv', 'ytmp4', 'yta', 'play2', 'ytmp3', 'ytaudio'];
 handler.tags = ['dl'];
 handler.register = true;
 
@@ -163,7 +163,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 };
 
 handler.help = ['play', 'playvid', 'ytv', 'ytmp4', 'yta', 'play2', 'ytmp3'];
-handler.command = ['play', 'playvid', 'ytv', 'ytmp4', 'yta', 'play2', 'ytmp3', 'ytaudio'];
+handler.command = ['play', 'playvid', 'ytv', 'ytmp4', 'yta', 'play2', 'ytmp3'];
 handler.tags = ['dl'];
 handler.group = true;
 handler.register = false;
