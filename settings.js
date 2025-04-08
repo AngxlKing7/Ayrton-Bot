@@ -64,8 +64,8 @@ global.etiqueta = '𝐀𝐧𝐠𝐞𝐥𝐃𝐞𝐯𝐳𝟕'
 global.moneda = 'Ayrton-Coins'
 global.welcom1 = '❍ Edita Con El Comando setwelcome'
 global.welcom2 = '❍ Edita Con El Comando setbye'
-global.banner = 'http://imgfz.com/i/AvjqxfO.jpeg'
-global.avatar = 'http://imgfz.com/i/jJWT9Me.jpeg'
+global.banner = 'https://files.catbox.moe/j0ftmj.jpg'
+global.avatar = 'https://files.catbox.moe/in011o.jpg'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
