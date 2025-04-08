@@ -1,24 +1,29 @@
+import moment from 'moment-timezone';
+
 let handler = async (m, { conn, args }) => {
-    let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
-    let user = global.db.data.users[userId]
-    let name = conn.getName(userId)
-    let _uptime = process.uptime() * 1000
-    let uptime = clockString(_uptime)
-    let totalreg = Object.keys(global.db.data.users).length
-    let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
+    // Asegúrate de que el comando no esté invocando el menú cuando no se necesita
+    if (args[0] && args[0].toLowerCase() === 'script') {
+        return; // Simplemente no hace nada si se ingresa '.menú script'
+    }
+
+    let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
+    let user = global.db.data.users[userId];
+    let name = conn.getName(userId);
+    let _uptime = process.uptime() * 1000;
+    let uptime = clockString(_uptime);
+    let totalreg = Object.keys(global.db.data.users).length;
+    let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
     
     let txt = `
-    𝐇𝐨𝐥𝐚! 𝐒𝐨𝐲 *${botname}* ${(conn.user.jid == global.conn.user.jid ? 'Principal 🜲' : '(Sub-bot)')}
-ᴀǫᴜɪ ᴛɪᴇɴᴇs ʟᴀ ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs
+Hola! Soy  *${botname}*  ${(conn.user.jid == global.conn.user.jid ? 'Principal 🜲' : '(Sub Bot)')}
+Aquí tienes la lista de comandos
 ╭┈ ↷
-│ ✐ 𝓓𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓭 𝓫𝔂 𝗔𝗻𝗴𝘅𝗹𝗞𝗶𝗻𝗴𝟳 🜲
-│ ✐ ꒷ꕤ💎ദ ᴄᴏᴍᴀɴᴅᴏs ෴
-│ https://ayrton.bot.nu/commands.html
-│ ✐ ꒷ꕤ💎ദ ᴄᴀɴᴀʟ ᴏғɪᴄɪᴀʟ ෴
-│ https://whatsapp.com/channel/0029VbAmwbQBqbr587Zkni1a
+│✐ 𝓓𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓭 𝓫𝔂 𝗔𝗻𝗴𝘅𝗹𝗞𝗶𝗻𝗴𝟳 🜲
+│✧ Comandos » ${totalCommands}
+│•——————•Canal Oficial•——————•
+│https://whatsapp.com/channel/0029VbAmwbQBqbr587Zkni1a
 ╰─────────────────
-
-✐; 💎→ ᴘᴀʀᴀ ᴄʀᴇᴀʀ ᴜɴ sᴜʙ-ʙᴏᴛ ᴄᴏɴ ᴛᴜ ɴᴜᴍᴇʀᴏ ᴜᴛɪʟɪᴢᴀ *#qr* o *#code*
+Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
 
 • :･ﾟ⊹˚• \`『 Info-Bot 』\` •˚⊹:･ﾟ•
 
@@ -534,43 +539,35 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#pvp • #suit* + <mencion>
 > ✦ Juega un pvp contra otro usuario.
 ᰔᩚ *#ttt*
-> ✦ Crea una sala de juego.`.trim()
+> ✦ Crea una sala de juego.
+  `.trim();
 
   await conn.sendMessage(m.chat, { 
       text: txt,
       contextInfo: {
           mentionedJid: [m.sender, userId],
-          isForwarded: true,
-          forwardedNewsletterMessageInfo: {
-              newsletterJid: channelRD.id,
-              newsletterName: channelRD.name,
-              serverMessageId: -1,
-          },
-          forwardingScore: 999,
+          isForwarded: false, // Desactiva la apariencia de reenviado
           externalAdReply: {
               title: botname,
               body: textbot,
               thumbnailUrl: banner,
-              sourceUrl: redes,
               mediaType: 1,
               showAdAttribution: true,
               renderLargerThumbnail: true,
           },
       },
-  }, { quoted: m })
+  }, { quoted: m });
+};
 
-}
+handler.help = ['menu'];
+handler.tags = ['main'];
+handler.command = ['menu', 'menú', 'help'];
 
-handler.help = ['menu']
-handler.tags = ['main']
-handler.command = ['menu', 'menú', 'help']
-
-export default handler
+export default handler;
 
 function clockString(ms) {
-    let seconds = Math.floor((ms / 1000) % 60)
-    let minutes = Math.floor((ms / (1000 * 60)) % 60)
-    let hours = Math.floor((ms / (1000 * 60 * 60)) % 24)
-    return `${hours}h ${minutes}m ${seconds}s`
+    let seconds = Math.floor((ms / 1000) % 60);
+    let minutes = Math.floor((ms / (1000 * 60)) % 60);
+    let hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
+    return `${hours}h ${minutes}m ${seconds}s`;
 }
-=
