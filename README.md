@@ -1,6 +1,6 @@
 <h1 align="center">✦ Ayrton - Bot ✦</h1>
 
- <img src= "https://files.catbox.moe/87c2il.jpg">
+ <img src= "https://files.catbox.moe/j0ftmj.jpg">
     </p>
 
 ### **`❕️ Información importante`**
