@@ -18,22 +18,22 @@ const ddownr = {
       }
     };
 
-    try {
-      const response = await axios.request(config);
-      if (response.data && response.data.success) {
-        const { id, title, info } = response.data;
-        const downloadUrl = await ddownr.cekProgress(id);
-        return {
-          id,
-          image: info.image,
-          title,
-          downloadUrl
-        };
-      } else {
-        throw new Error('✦ Fallo al obtener los detalles del video.');
-      }
-    } catch (error) {
-      throw error;
+    const response = await axios.request(config);
+    if (response.data && response.data.success) {
+      const { id, title, info } = response.data;
+      const { image } = info;
+      const { size } = response.data;
+
+      const downloadUrl = await ddownr.cekProgress(id);
+      return {
+        id,
+        image,
+        title,
+        size,
+        downloadUrl
+      };
+    } else {
+      throw new Error('✦ Falló al obtener los detalles del video.');
     }
   },
 
@@ -46,53 +46,62 @@ const ddownr = {
       }
     };
 
-    try {
-      for (let i = 0; i < 10; i++) {
-        const response = await axios.request(config);
-        if (response.data && response.data.success && response.data.progress === 1000) {
-          return response.data.download_url;
-        }
-        await new Promise(resolve => setTimeout(resolve, 2500));
+    for (let i = 0; i < 6; i++) {
+      const response = await axios.request(config);
+      if (response.data?.success && response.data.progress === 1000) {
+        return response.data.download_url;
       }
-      throw new Error('✦ Tiempo de espera agotado.');
-    } catch (error) {
-      throw error;
+      await new Promise(resolve => setTimeout(resolve, 2500)); // máx. 15s
     }
+
+    throw new Error('✦ Tiempo de espera agotado. Intenta con otra canción.');
   }
 };
 
-const formatViews = (num) => {
-  if (num >= 1e6) return (num / 1e6).toFixed(1) + 'M';
-  if (num >= 1e3) return (num / 1e3).toFixed(1) + 'K';
-  return num;
+const formatViews = (n) => {
+  if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
+  if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+  return n;
 };
 
 const handler = async (m, { conn, text }) => {
   try {
-    if (!text.trim()) return conn.reply(m.chat, 'Ingresa el nombre de la música ejemplo: Jacobo grinberg Victor Mendivil', m);
+    if (!text.trim()) {
+      return conn.reply(m.chat, '╭───────────⩊\n│  Ingresa el nombre de la música.\n╰───────────⩊', m);
+    }
 
     const search = await yts(text);
-    if (!search.all || search.all.length === 0) return m.reply('No se encontraron resultados.');
+    if (!search.all || search.all.length === 0) {
+      return m.reply('No se encontraron resultados.');
+    }
 
     const videoInfo = search.all[0];
-    const { title, thumbnail, timestamp, views, ago, url } = videoInfo;
-    const infoMessage = `「✦」Descargando *<${title}>*\n\n> ✦ Canal » *${videoInfo.author.name || 'Desconocido'}*\n> ✰ Vistas » *${formatViews(views)}*\n> ⴵ Duración » *${timestamp}*\n> ✐ Publicación » *${ago}*\n`;
+    const { title, thumbnail, timestamp, views, ago, url, author, uploadedAt } = videoInfo;
+    const thumb = (await conn.getFile(thumbnail))?.data;
+
+    const api = await ddownr.download(url, 'mp3');
+    const { downloadUrl, size } = api;
+
+    const infoMessage = `「✦」Descargando *<${title}>*\n\n` +
+      `> ✦ Canal » *${author.name || 'Desconocido'}*\n` +
+      `> ✰ Vistas » *${formatViews(views)}*\n` +
+      `> ⴵ Duración » *${timestamp}*\n` +
+      `> ✐ Publicación » *${uploadedAt || ago}*\n` +
+      `> 🜸 Link » ${url}\n` +
+      `> 🗂️ Tamaño » *${size}*\n`;
 
     await conn.sendMessage(m.chat, {
       image: { url: thumbnail },
       caption: infoMessage
     }, { quoted: m });
 
-    const api = await ddownr.download(url, 'mp3');
-    const result = api.downloadUrl;
-
     await conn.sendMessage(m.chat, {
-      audio: { url: result },
+      audio: { url: downloadUrl },
       mimetype: "audio/mpeg"
     }, { quoted: m });
 
   } catch (error) {
-    return m.reply(`✦ Error: ${error.message}`);
+    return m.reply(`✦ Error: ${error.message}\n`);
   }
 };
 
