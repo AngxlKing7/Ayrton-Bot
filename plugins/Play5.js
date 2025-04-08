@@ -23,7 +23,6 @@ const ddownr = {
       if (response.data && response.data.success) {
         const { id, title, info } = response.data;
         const { image } = info;
-        const { size } = response.data;
         const downloadUrl = await ddownr.cekProgress(id);
 
         return {
@@ -68,7 +67,7 @@ const ddownr = {
 const handler = async (m, { conn, text, usedPrefix, command }) => { 
   try { 
     if (!text.trim()) { 
-      return conn.reply(m.chat, '╭───────────⩊\n│  Ingresa el nombre de la música.\n╰───────────⩊', m); 
+      return conn.reply(m.chat, 'Ingresa el nombre de la música ejemplo: Un scar Victor mendivil', m); 
     }
 
     const search = await yts(text);
@@ -78,7 +77,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 
     const videoInfo = search.all[0];
     const { title, thumbnail, timestamp, views, ago, url } = videoInfo;
-    const infoMessage = `「✦」Descargando *<${title}>*\n\n> ✦ Canal » *${videoInfo.author.name || 'Desconocido'}*\n> ✰ Vistas » *${views}*\n> ⴵ Duración » *${timestamp}*\n> ✐ Publicación » *${ago}*\n> ❒ Tamaño » *${size}*\n> 🜸 Link » ${url}\n`;
+    const infoMessage = `「✦」Descargando *<${title}>*\n\n> ✦ Canal » *${videoInfo.author.name || 'Desconocido'}*\n> ✰ Vistas » *${views}*\n> ⴵ Duración » *${timestamp}*\n> ✐ Publicación » *${ago}*\n> 🜸 Link » ${url}\n`;
 
     const thumb = (await conn.getFile(thumbnail))?.data;
 
