@@ -8,10 +8,10 @@ let handler = async (m, { conn, args }) => {
     let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
     
     let txt = `
-    𝐇𝐨𝐥𝐚! 𝐒𝐨𝐲 *${botname}* ${(conn.user.jid == global.conn.user.jid ? '' : '(𝐒𝐮𝐛-𝐁𝐨𝐭)')}
+    Hola! Soy *${botname}* ${(conn.user.jid == global.conn.user.jid ? '🜲' : '(Sub-Bot)')}
 Aquí tienes la lista de comandos
 ╭┈ ↷
-│ ✐ 𝓓𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓭 𝓫𝔂 𝗔𝗻𝗴𝘅𝗹𝗞𝗶𝗻𝗴𝟳 🜲
+│ ✐ Developed By *AngxlKing7* 🜲
 │ ✐ ꒷ꕤ💎ദ comandos ෴
 │ https://ayrton.bot.nu/commands.html
 │ ✐ ꒷ꕤ💎ദ canal oficial ෴
