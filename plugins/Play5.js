@@ -23,6 +23,7 @@ const ddownr = {
       if (response.data && response.data.success) {
         const { id, title, info } = response.data;
         const { image } = info;
+        const { size } = response.data;
         const downloadUrl = await ddownr.cekProgress(id);
 
         return {
