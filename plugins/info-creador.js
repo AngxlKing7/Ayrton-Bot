@@ -1,34 +1,18 @@
 import PhoneNumber from 'awesome-phonenumber';
 
-const suittag = '5215665619261'; // Número del owner
-const botname = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭'; // Nombre del bot
-const packname = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭';
-const dev = 'Desarrollador: AngxlKing7';
-const correo = 'angelcortes7x@gmail.com'; // Cambia esto por tu correo
-const md = 'https://github.com/Ayrton-Bot'; // URL del proyecto
-const channel = 'https://youtube.com/Kaneki2kff'; // URL del canal
-
 let handler = async (m, { conn }) => {
-  m.react?.('🤍'); // Asegura que m.react exista antes de usarlo
-
-  let who = m.mentionedJid && m.mentionedJid[0] 
-    ? m.mentionedJid[0] 
-    : m.fromMe 
-      ? conn.user.jid 
-      : m.sender;
-
+  m.react('👋');
+  let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
   let pp = await conn.profilePictureUrl(who).catch(_ => 'https://qu.ax/PRgfc.jpg');
-  
-  let biografia = await conn.fetchStatus(`${suittag}@s.whatsapp.net`).catch(_ => ({ status: 'Sin Biografía' }));
-  let biografiaBot = await conn.fetchStatus(`${conn.user.jid.split('@')[0]}@s.whatsapp.net`).catch(_ => ({ status: 'Sin Biografía' }));
-
-  let bio = biografia?.status?.toString() || 'Sin Biografía';
-  let biobot = biografiaBot?.status?.toString() || 'Sin Biografía';
+  let biografia = await conn.fetchStatus(`${suittag}@s.whatsapp.net`).catch(_ => 'Sin Biografía');
+  let biografiaBot = await conn.fetchStatus(`${conn.user.jid.split('@')[0]}@s.whatsapp.net`).catch(_ => 'Sin Biografía');
+  let bio = biografia.status?.toString() || 'Sin Biografía';
+  let biobot = biografiaBot.status?.toString() || 'Sin Biografía';
   let name = await conn.getName(who);
 
   await sendContactArray(conn, m.chat, [
-    [`${suittag}`, `Propietario`, botname, `No Hacer Spam`, `Mexico`, md, bio],
-    [`${conn.user.jid.split('@')[0]}`, `Bot`, packname, dev, `Mexico`, biobot]
+    [`${suittag}`, `Propietario 👑`, botname, `No Hacer Spam`, correo, `México`, md, bio],
+    [`${conn.user.jid.split('@')[0]}`, `𝐴𝑦𝑟𝑡𝑜𝑛 - 𝐵𝑜𝑡`, packname, dev, correo, `Mexico`, channel, biobot]
   ], m);
 }
 
@@ -50,7 +34,7 @@ VERSION:3.0
 N:;${name.replace(/\n/g, '\\n')};;;
 FN:${name.replace(/\n/g, '\\n')}
 item.ORG:${isi}
-item1.TEL;waid=${number}:${new PhoneNumber('+' + number).getNumber('international')}
+item1.TEL;waid=${number}:${PhoneNumber('+' + number).getNumber('international')}
 item1.X-ABLabel:${isi1}
 item2.EMAIL;type=INTERNET:${isi2}
 item2.X-ABLabel:Email
@@ -65,7 +49,7 @@ END:VCARD`.trim();
   }
   return await conn.sendMessage(jid, {
     contacts: {
-      displayName: contacts.length > 1 ? `Contactos` : contacts[0].displayName,
+      displayName: (contacts.length > 1 ? `Contactos` : contacts[0].displayName) || null,
       contacts,
     }
   }, {
