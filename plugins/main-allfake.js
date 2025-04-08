@@ -101,7 +101,7 @@ global.taguser = '@' + m.sender.split("@s.whatsapp.net")
 var more = String.fromCharCode(8206)
 global.readMore = more.repeat(850)
 
-global.packsticker = `┊ Ayrton-Bot\n⤷ https://ayrton.bot.nu/\n\n┊INFO 👹\n ⤷ https://ayrton.bot.nu/discord\n┊Bot 👑\n┊⤷${botname} \n\n┊Usuario 👑\n┊⤷${nombre}`;
+global.packsticker = `┊ Ayrton Team\n⤷ https://ayrton.bot.nu/\n\n┊INFO 👹\n ⤷ ayrton.bot.nu/discord • ┊Bot 👑\n┊⤷${botname} \n\n┊Usuario:\n┊⤷${nombre}`;
 global.packsticker2 = `\n\n${dev}`
   
 //Fakes
