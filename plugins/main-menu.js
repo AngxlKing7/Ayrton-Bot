@@ -24,522 +24,522 @@ Aquí tienes la lista de comandos
 │•——————•Canal Oficial•——————•
 │https://whatsapp.com/channel/0029VbAmwbQBqbr587Zkni1a
 ╰─────────────────
-Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
+Crea un *Sub-Bot* con tu número utilizando *${usedPrefix}qr* o *${usedPrefix}code*
 
 • :･ﾟ⊹˚• \`『 Info-Bot 』\` •˚⊹:･ﾟ•
 
 ❍ Comandos para ver estado e información de el bot.
-ᰔᩚ *#uptime • #runtime*
+ᰔᩚ *${usedPrefix}uptime • ${usedPrefix}runtime*
 > ✦ Ver tiempo activo o en linea de el bot.
-ᰔᩚ *#bots • #sockets*
+ᰔᩚ *${usedPrefix}bots • ${usedPrefix}sockets*
 > ✦ Ver la lista de Sub-Bots activos.
-ᰔᩚ *#creador*
+ᰔᩚ *${usedPrefix}creador*
 > ✦ Contacto del creador de el bot.
-ᰔᩚ *#status • #estado*
+ᰔᩚ *${usedPrefix}status • ${usedPrefix}estado*
 > ✦ Ver el estado actual de el bot.
-ᰔᩚ *#infobot • #infobot*
+ᰔᩚ *${usedPrefix}infobot • ${usedPrefix}infobot*
 > ✦ Ver la información completa de el bot.
-ᰔᩚ *#sug • #newcommand*
+ᰔᩚ *${usedPrefix}sug • ${usedPrefix}newcommand*
 > ✦ Sugiere un nuevo comando.
-ᰔᩚ *#p • #ping*
+ᰔᩚ *${usedPrefix}p • ${usedPrefix}ping*
 > ✦ Ver la velocidad de respuesta del bot.
-ᰔᩚ *#reporte • #reportar*
+ᰔᩚ *${usedPrefix}reporte • ${usedPrefix}reportar*
 > ✦ Reporta alguna falla o problema de el bot.
-ᰔᩚ *#speed • #speedtest*
+ᰔᩚ *${usedPrefix}speed • ${usedPrefix}speedtest*
 > ✦ Ver las estadísticas de velocidad de el bot.
-ᰔᩚ *#funciones • #totalfunciones*
+ᰔᩚ *${usedPrefix}funciones • ${usedPrefix}totalfunciones*
 > ✦ Ver todas las funciones de el bot.
 
 • :･ﾟ⊹˚• \`『 Buscadores 』\` •˚⊹:･ﾟ•
 
 ❍ Comandos para realizar búsquedas en distintas plataformas.
-ᰔᩚ *#tiktoksearch • #tiktoks*
+ᰔᩚ *${usedPrefix}tiktoksearch • ${usedPrefix}tiktoks*
 > ✦ Buscador de videos de tiktok.
-ᰔᩚ *#tweetposts*
+ᰔᩚ *${usedPrefix}tweetposts*
 > ✦ Buscador de posts de Twitter/X.
-ᰔᩚ *#ytsearch • #yts*
+ᰔᩚ *${usedPrefix}ytsearch • ${usedPrefix}yts*
 > ✦ Realiza búsquedas de Youtube.
-ᰔᩚ *#cuevana • #cuevanasearch*
+ᰔᩚ *${usedPrefix}cuevana • ${usedPrefix}cuevanasearch*
 > ✦ Buscador de películas/series por Cuevana.
-ᰔᩚ *#google*
+ᰔᩚ *${usedPrefix}google*
 > ✦ Realiza búsquedas por Google.
-ᰔᩚ *#pin • #pinterest*
+ᰔᩚ *${usedPrefix}pin • ${usedPrefix}pinterest*
 > ✦ Buscador de imagenes de Pinterest.
-ᰔᩚ *#imagen • #image*
+ᰔᩚ *${usedPrefix}imagen • ${usedPrefix}image*
 > ✦ buscador de imagenes de Google.
-ᰔᩚ *#animesearch • #animess*
+ᰔᩚ *${usedPrefix}animesearch • ${usedPrefix}animess*
 > ✦ Buscador de animes de tioanime.
-ᰔᩚ *#animei • #animeinfo*
-> ✦ Buscador de capítulos de #animesearch.
-ᰔᩚ *#infoanime*
+ᰔᩚ *${usedPrefix}animei • ${usedPrefix}animeinfo*
+> ✦ Buscador de capítulos de ${usedPrefix}animesearch.
+ᰔᩚ *${usedPrefix}infoanime*
 > ✦ Buscador de información de anime/manga.
-ᰔᩚ *#hentaisearch • #searchhentai*
+ᰔᩚ *${usedPrefix}hentaisearch • ${usedPrefix}searchhentai*
 > ✦ Buscador de capítulos hentai.
-ᰔᩚ #xnxxsearch • #xnxxs*
+ᰔᩚ ${usedPrefix}xnxxsearch • ${usedPrefix}xnxxs*
 > ✦ Buscador de vídeos de Xnxx.
-ᰔᩚ *#xvsearch • #xvideossearch*
+ᰔᩚ *${usedPrefix}xvsearch • ${usedPrefix}xvideossearch*
 > ✦ Buscador de vídeos de Xvideos.
-ᰔᩚ *#pornhubsearch • #phsearch*
+ᰔᩚ *${usedPrefix}pornhubsearch • ${usedPrefix}phsearch*
 > ✦ Buscador de videos de Pornhub.
-ᰔᩚ *#npmjs*
+ᰔᩚ *${usedPrefix}npmjs*
 > ✦ Buscandor de npmjs.
 
 • :･ﾟ⊹˚• \`『 Descargas 』\` •˚⊹:･ﾟ•
 
 ❍ Comandos de descargas para varios archivos.
-ᰔᩚ *#tiktok • #tt*
+ᰔᩚ *${usedPrefix}tiktok • ${usedPrefix}tt*
 > ✦ Descarga videos de TikTok.
-ᰔᩚ *#mediafire • #mf*
+ᰔᩚ *${usedPrefix}mediafire • ${usedPrefix}mf*
 > ✦ Descargar un archivo de MediaFire.
-ᰔᩚ *#pinvid • #pinvideo* + [enlacé]
+ᰔᩚ *${usedPrefix}pinvid • ${usedPrefix}pinvideo* + [enlacé]
 > ✦ Descargar vídeos de Pinterest. 
-ᰔᩚ *#mega • #mg* + [enlacé]
+ᰔᩚ *${usedPrefix}mega • ${usedPrefix}mg* + [enlacé]
 > ✦ Descargar un archivo de MEGA.
-ᰔᩚ *#play • #play2*
+ᰔᩚ *${usedPrefix}play • ${usedPrefix}play2*
 > ✦ Descarga música/video de YouTube.
-ᰔᩚ *#ytmp3 • #ytmp4*
+ᰔᩚ *${usedPrefix}ytmp3 • ${usedPrefix}ytmp4*
 > ✦ Descarga música/video de YouTube mediante url.
-ᰔᩚ *#fb • #facebook*
+ᰔᩚ *${usedPrefix}fb • ${usedPrefix}facebook*
 > ✦ Descarga videos de Facebook.
-ᰔᩚ *#twitter • #x* + [Link]
+ᰔᩚ *${usedPrefix}twitter • ${usedPrefix}x* + [Link]
 > ✦ Descargar un video de Twitter/X
-ᰔᩚ *#ig • #instagram*
+ᰔᩚ *${usedPrefix}ig • ${usedPrefix}instagram*
 > ✦ Descarga contenido de Instagram.
-ᰔᩚ *#tts • #tiktoks* + [busqueda]
+ᰔᩚ *${usedPrefix}tts • ${usedPrefix}tiktoks* + [busqueda]
 > ✦ Buscar videos de tiktok 
-ᰔᩚ *#terabox • #tb* + [enlace]
+ᰔᩚ *${usedPrefix}terabox • ${usedPrefix}tb* + [enlace]
 > ✦ Descargar archivos por Terabox.
-ᰔᩚ *#gdrive • #drive* + [enlace]
+ᰔᩚ *${usedPrefix}gdrive • ${usedPrefix}drive* + [enlace]
 > ✦ Descargar archivos por Google Drive.
-ᰔᩚ *#ttimg • #ttmp3* + <url>
+ᰔᩚ *${usedPrefix}ttimg • ${usedPrefix}ttmp3* + <url>
 > ✦ Descarga fotos/audios de tiktok. 
-ᰔᩚ *#xvideosdl*
+ᰔᩚ *${usedPrefix}xvideosdl*
 > ✦ Descarga videos porno de (Xvideos). 
-ᰔᩚ *#xnxxdl*
+ᰔᩚ *${usedPrefix}xnxxdl*
 > ✦ Descarga videos porno de (xnxx).
-ᰔᩚ *#apk • #modapk*
+ᰔᩚ *${usedPrefix}apk • ${usedPrefix}modapk*
 > ✦ Descarga un apk de Aptoide.
-ᰔᩚ *#tiktokrandom • #ttrandom*
+ᰔᩚ *${usedPrefix}tiktokrandom • ${usedPrefix}ttrandom*
 > ✦ Descarga un video aleatorio de tiktok.
-ᰔᩚ *#npmdl • #npmdownloader*
+ᰔᩚ *${usedPrefix}npmdl • ${usedPrefix}npmdownloader*
 > ✦ Descarga paquetes de NPMJs.
-ᰔᩚ *#animelinks • #animedl*
+ᰔᩚ *${usedPrefix}animelinks • ${usedPrefix}animedl*
 > ✦ Descarga Links disponibles de descargas.
 
 • :･ﾟ⊹˚• \`『 Economia 』\` •˚⊹:･ﾟ•
 
 ❍ Comandos de economía y rpg para ganar dinero y otros recursos.
-ᰔᩚ *#w • #work • #trabajar*
+ᰔᩚ *${usedPrefix}w • ${usedPrefix}work • ${usedPrefix}trabajar*
 > ✦ Trabaja para ganar ${moneda}.
-ᰔᩚ *#slut • #protituirse*
+ᰔᩚ *${usedPrefix}slut • ${usedPrefix}protituirse*
 > ✦ Trabaja como prostituta y gana ${moneda}.
-ᰔᩚ *#cf • #suerte*
+ᰔᩚ *${usedPrefix}cf • ${usedPrefix}suerte*
 > ✦ Apuesta tus ${moneda} a cara o cruz.
-ᰔᩚ *#crime • #crimen
+ᰔᩚ *${usedPrefix}crime • ${usedPrefix}crimen
 > ✦ Trabaja como ladrón para ganar ${moneda}.
-ᰔᩚ *#ruleta • #roulette • #rt*
+ᰔᩚ *${usedPrefix}ruleta • ${usedPrefix}roulette • ${usedPrefix}rt*
 > ✦ Apuesta ${moneda} al color rojo o negro.
-ᰔᩚ *#casino • #apostar*
+ᰔᩚ *${usedPrefix}casino • ${usedPrefix}apostar*
 > ✦ Apuesta tus ${moneda} en el casino.
-ᰔᩚ *#slot*
+ᰔᩚ *${usedPrefix}slot*
 > ✦ Apuesta tus ${moneda} en la ruleta y prueba tu suerte.
-ᰔᩚ *#cartera • #wallet*
+ᰔᩚ *${usedPrefix}cartera • ${usedPrefix}wallet*
 > ✦ Ver tus ${moneda} en la cartera.
-ᰔᩚ *#banco • #bank*
+ᰔᩚ *${usedPrefix}banco • ${usedPrefix}bank*
 > ✦ Ver tus ${moneda} en el banco.
-ᰔᩚ *#deposit • #depositar • #d*
+ᰔᩚ *${usedPrefix}deposit • ${usedPrefix}depositar • ${usedPrefix}d*
 > ✦ Deposita tus ${moneda} al banco.
-ᰔᩚ *#with • #retirar • #withdraw*
+ᰔᩚ *${usedPrefix}with • ${usedPrefix}retirar • ${usedPrefix}withdraw*
 > ✦ Retira tus ${moneda} del banco.
-ᰔᩚ *#transfer • #pay*
+ᰔᩚ *${usedPrefix}transfer • ${usedPrefix}pay*
 > ✦ Transfiere ${moneda} o XP a otros usuarios.
-ᰔᩚ *#miming • #minar • #mine*
+ᰔᩚ *${usedPrefix}miming • ${usedPrefix}minar • ${usedPrefix}mine*
 > ✦ Trabaja como minero y recolecta recursos.
-ᰔᩚ *#buyall • #buy*
+ᰔᩚ *${usedPrefix}buyall • ${usedPrefix}buy*
 > ✦ Compra ${moneda} con tu XP.
-ᰔᩚ *#daily • #diario*
+ᰔᩚ *${usedPrefix}daily • ${usedPrefix}diario*
 > ✦ Reclama tu recompensa diaria.
-ᰔᩚ *#cofre*
+ᰔᩚ *${usedPrefix}cofre*
 > ✦ Reclama un cofre diario lleno de recursos.
-ᰔᩚ *#weekly • #semanal*
+ᰔᩚ *${usedPrefix}weekly • ${usedPrefix}semanal*
 > ✦ Reclama tu regalo semanal.
-ᰔᩚ *#monthly • #mensual*
+ᰔᩚ *${usedPrefix}monthly • ${usedPrefix}mensual*
 > ✦ Reclama tu recompensa mensual.
-ᰔᩚ *#steal • #robar • #rob*
+ᰔᩚ *${usedPrefix}steal • ${usedPrefix}robar • ${usedPrefix}rob*
 > ✦ Intenta robarle ${moneda} a alguien.
-ᰔᩚ *#robarxp • #robxp*
+ᰔᩚ *${usedPrefix}robarxp • ${usedPrefix}robxp*
 > ✦ Intenta robar XP a un usuario.
-ᰔᩚ *#eboard • #baltop*
+ᰔᩚ *${usedPrefix}eboard • ${usedPrefix}baltop*
 > ✦ Ver el ranking de usuarios con más ${moneda}.
-ᰔᩚ *#aventura • #adventure*
+ᰔᩚ *${usedPrefix}aventura • ${usedPrefix}adventure*
 > ✦ Aventúrate en un nuevo reino y recolecta recursos.
-ᰔᩚ *#curar • #heal*
+ᰔᩚ *${usedPrefix}curar • ${usedPrefix}heal*
 > ✦ Cura tu salud para volverte aventurar.
-ᰔᩚ *#cazar • #hunt • #berburu*
+ᰔᩚ *${usedPrefix}cazar • ${usedPrefix}hunt • ${usedPrefix}berburu*
 > ✦ Aventúrate en una caza de animales.
-ᰔᩚ *#inv • #inventario*
+ᰔᩚ *${usedPrefix}inv • ${usedPrefix}inventario*
 > ✦ Ver tu inventario con todos tus ítems.
-ᰔᩚ *#mazmorra • #explorar*
+ᰔᩚ *${usedPrefix}mazmorra • ${usedPrefix}explorar*
 > ✦ Explorar mazmorras para ganar ${moneda}.
-ᰔᩚ *#halloween*
+ᰔᩚ *${usedPrefix}halloween*
 > ✦ Reclama tu dulce o truco (Solo en Halloween).
-ᰔᩚ *#christmas • #navidad*
+ᰔᩚ *${usedPrefix}christmas • ${usedPrefix}navidad*
 > ✦ Reclama tu regalo navideño (Solo en Navidad).
 
 • :･ﾟ⊹˚• \`『 Gacha 』\` •˚⊹:･ﾟ•
 
 ❍ Comandos de gacha para reclamar y colecciónar personajes.
-ᰔᩚ *#rollwaifu • #rw • #roll*
+ᰔᩚ *${usedPrefix}rollwaifu • ${usedPrefix}rw • ${usedPrefix}roll*
 > ✦ Waifu o husbando aleatorio.
-ᰔᩚ  *#claim • #c • #reclamar*
+ᰔᩚ  *${usedPrefix}claim • ${usedPrefix}c • ${usedPrefix}reclamar*
 > ✦ Reclamar un personaje.
-ᰔᩚ *#harem • #waifus • #claims*
+ᰔᩚ *${usedPrefix}harem • ${usedPrefix}waifus • ${usedPrefix}claims*
 > ✦ Ver tus personajes reclamados.
-ᰔᩚ *#charimage • #waifuimage • #wimage* 
+ᰔᩚ *${usedPrefix}charimage • ${usedPrefix}waifuimage • ${usedPrefix}wimage* 
 > ✦ Ver una imagen aleatoria de un personaje.
-ᰔᩚ *#charinfo • #winfo • #waifuinfo*
+ᰔᩚ *${usedPrefix}charinfo • ${usedPrefix}winfo • ${usedPrefix}waifuinfo*
 > ✦ Ver información de un personaje.
-ᰔᩚ *#givechar • #givewaifu • #regalar*
+ᰔᩚ *${usedPrefix}givechar • ${usedPrefix}givewaifu • ${usedPrefix}regalar*
 > ✦ Regalar un personaje a otro usuario.
-ᰔᩚ *#vote • #votar*
+ᰔᩚ *${usedPrefix}vote • ${usedPrefix}votar*
 > ✦ Votar por un personaje para subir su valor.
-ᰔᩚ *#waifusboard • #waifustop • #topwaifus*
+ᰔᩚ *${usedPrefix}waifusboard • ${usedPrefix}waifustop • ${usedPrefix}topwaifus*
 > ✦ Ver el top de personajes con mayor valor.
 
 • :･ﾟ⊹˚• \`『 Stickers 』\` •˚⊹:･ﾟ•
 
 ❍ Comandos para creaciones de stickers etc.
-ᰔᩚ *#sticker • #s*
+ᰔᩚ *${usedPrefix}sticker • ${usedPrefix}s*
 > ✦ Crea stickers de (imagen/video)
-ᰔᩚ *#setmeta*
+ᰔᩚ *${usedPrefix}setmeta*
 > ✦ Estable un pack y autor para los stickers.
-ᰔᩚ *#delmeta*
+ᰔᩚ *${usedPrefix}delmeta*
 > ✦ Elimina tu pack de stickers.
-ᰔᩚ *#pfp • #getpic*
+ᰔᩚ *${usedPrefix}pfp • ${usedPrefix}getpic*
 > ✦ Obtén la foto de perfil de un usuario.
-ᰔᩚ *#qc*
+ᰔᩚ *${usedPrefix}qc*
 > ✦ Crea stickers con texto o de un usuario.
-ᰔᩚ *#toimg • #img*
+ᰔᩚ *${usedPrefix}toimg • ${usedPrefix}img*
 > ✦ Convierte stickers en imagen.
-ᰔᩚ *#brat • #ttp • #attp*︎ 
+ᰔᩚ *${usedPrefix}brat • ${usedPrefix}ttp • ${usedPrefix}attp*︎ 
 > ✦ Crea stickers con texto.
-ᰔᩚ *#emojimix*
+ᰔᩚ *${usedPrefix}emojimix*
 > ✦ Fuciona 2 emojis para crear un sticker.
-ᰔᩚ *#wm*
+ᰔᩚ *${usedPrefix}wm*
 > ✦ Cambia el nombre de los stickers.
 
 •:･ﾟ⊹˚• \`『 Herramientas 』\` •˚⊹:･ﾟ•
 
 ❍ Comandos de herramientas con muchas funciones.
-ᰔᩚ *#calcular • #calcular • #cal*
+ᰔᩚ *${usedPrefix}calcular • ${usedPrefix}calcular • ${usedPrefix}cal*
 > ✦ Calcular todo tipo de ecuaciones.
-ᰔᩚ *#tiempo • #clima*
+ᰔᩚ *${usedPrefix}tiempo • ${usedPrefix}clima*
 > ✦ Ver el clima de un pais.
-ᰔᩚ *#horario*
+ᰔᩚ *${usedPrefix}horario*
 > ✦ Ver el horario global de los países.
-ᰔᩚ *#fake • #fakereply*
+ᰔᩚ *${usedPrefix}fake • ${usedPrefix}fakereply*
 > ✦ Crea un mensaje falso de un usuario.
-ᰔᩚ *#enhance • #remini • #hd*
+ᰔᩚ *${usedPrefix}enhance • ${usedPrefix}remini • ${usedPrefix}hd*
 > ✦ Mejora la calidad de una imagen.
-ᰔᩚ *#letra*
+ᰔᩚ *${usedPrefix}letra*
 > ✦ Cambia la fuente de las letras.
-ᰔᩚ *#read • #readviewonce • #ver*
+ᰔᩚ *${usedPrefix}read • ${usedPrefix}readviewonce • ${usedPrefix}ver*
 > ✦ Ver imágenes de una sola vista.
-ᰔᩚ *#whatmusic • #shazam*
+ᰔᩚ *${usedPrefix}whatmusic • ${usedPrefix}shazam*
 > ✦ Descubre el nombre de canciones o vídeos.
-ᰔᩚ *#spamwa • #spam*
+ᰔᩚ *${usedPrefix}spamwa • ${usedPrefix}spam*
 > ✦ Envia spam aun usuario.
-ᰔᩚ *#ss • #ssweb*
+ᰔᩚ *${usedPrefix}ss • ${usedPrefix}ssweb*
 > ✦ Ver el estado de una página web.
-ᰔᩚ *#length • #tamaño*
+ᰔᩚ *${usedPrefix}length • ${usedPrefix}tamaño*
 > ✦ Cambia el tamaño de imágenes y vídeos.
-ᰔᩚ *#say • #decir* + [texto]
+ᰔᩚ *${usedPrefix}say • ${usedPrefix}decir* + [texto]
 > ✦ Repetir un mensaje.
-ᰔᩚ *#todoc • #toducument*
+ᰔᩚ *${usedPrefix}todoc • ${usedPrefix}toducument*
 > ✦ Crea documentos de (audio, imágenes y vídeos).
-ᰔᩚ *#translate • #traducir • #trad*
+ᰔᩚ *${usedPrefix}translate • ${usedPrefix}traducir • ${usedPrefix}trad*
 > ✦ Traduce palabras en otros idiomas.
 
 • :･ﾟ⊹˚• \`『 Perfil 』\` •˚⊹:･ﾟ•
 
 ❍ Comandos de perfil para ver, configurar y comprobar estados de tu perfil.
-ᰔᩚ *#reg • #verificar • #register*
+ᰔᩚ *${usedPrefix}reg • ${usedPrefix}verificar • ${usedPrefix}register*
 > ✦ Registra tu nombre y edad en el bot.
-ᰔᩚ *#unreg*
+ᰔᩚ *${usedPrefix}unreg*
 > ✦ Elimina tu registro del bot.
-ᰔᩚ *#profile*
+ᰔᩚ *${usedPrefix}profile*
 > ✦ Muestra tu perfil de usuario.
-ᰔᩚ *#marry* [mension / etiquetar]
+ᰔᩚ *${usedPrefix}marry* [mension / etiquetar]
 > ✦ Propón matrimonio a otro usuario.
-ᰔᩚ *#divorce*
+ᰔᩚ *${usedPrefix}divorce*
 > ✦ Divorciarte de tu pareja.
-ᰔᩚ *#setgenre • #setgenero*
+ᰔᩚ *${usedPrefix}setgenre • ${usedPrefix}setgenero*
 > ✦ Establece tu género en el perfil del bot.
-ᰔᩚ *#delgenre • #delgenero*
+ᰔᩚ *${usedPrefix}delgenre • ${usedPrefix}delgenero*
 > ✦ Elimina tu género del perfil del bot.
-ᰔᩚ *#setbirth • #setnacimiento*
+ᰔᩚ *${usedPrefix}setbirth • ${usedPrefix}setnacimiento*
 > ✦ Establece tu fecha de nacimiento en el perfil del bot.
-ᰔᩚ *#delbirth • #delnacimiento*
+ᰔᩚ *${usedPrefix}delbirth • ${usedPrefix}delnacimiento*
 > ✦ Elimina tu fecha de nacimiento del perfil del bot.
-ᰔᩚ *#setdescription • #setdesc*
+ᰔᩚ *${usedPrefix}setdescription • ${usedPrefix}setdesc*
 > ✦ Establece una descripción en tu perfil del bot.
-ᰔᩚ *#deldescription • #deldesc*
+ᰔᩚ *${usedPrefix}deldescription • ${usedPrefix}deldesc*
 > ✦ Elimina la descripción de tu perfil del bot.
-ᰔᩚ *#lb • #lboard* + <Paginá>
+ᰔᩚ *${usedPrefix}lb • ${usedPrefix}lboard* + <Paginá>
 > ✦ Top de usuarios con más (experiencia y nivel).
-ᰔᩚ *#level • #lvl* + <@Mencion>
+ᰔᩚ *${usedPrefix}level • ${usedPrefix}lvl* + <@Mencion>
 > ✦ Ver tu nivel y experiencia actual.
-ᰔᩚ *#comprarpremium • #premium*
+ᰔᩚ *${usedPrefix}comprarpremium • ${usedPrefix}premium*
 > ✦ Compra un pase premium para usar el bot sin límites.
-ᰔᩚ *#confesiones • #confesar*
+ᰔᩚ *${usedPrefix}confesiones • ${usedPrefix}confesar*
 > ✦ Confiesa tus sentimientos a alguien de manera anonima.
 
 • :･ﾟ⊹˚• \`『 Grupos 』\` •˚⊹:･ﾟ•
 
 ❍ Comandos de grupos para una mejor gestión de ellos.
-ᰔᩚ *#config • #on*
+ᰔᩚ *${usedPrefix}config • ${usedPrefix}on*
 > ✦ Ver opciones de configuración de grupos.
-ᰔᩚ *#hidetag • #tag*
+ᰔᩚ *${usedPrefix}hidetag • ${usedPrefix}tag*
 > ✦ Envia un mensaje mencionando a todos los usuarios
-ᰔᩚ *#gp • #infogrupo*
+ᰔᩚ *${usedPrefix}gp • ${usedPrefix}infogrupo*
 > ✦  Ver la Informacion del grupo.
-ᰔᩚ *#linea • #listonline*
+ᰔᩚ *${usedPrefix}linea • ${usedPrefix}listonline*
 > ✦ Ver la lista de los usuarios en linea.
-ᰔᩚ *#setwelcome*
+ᰔᩚ *${usedPrefix}setwelcome*
 > ✦ Establecer un mensaje de bienvenida personalizado.
-ᰔᩚ *#setbye*
+ᰔᩚ *${usedPrefix}setbye*
 > ✦ Establecer un mensaje de despedida personalizado.
-ᰔᩚ *#link*
+ᰔᩚ *${usedPrefix}link*
 > ✦ el bot envia el link del grupo.
-ᰔᩚ *#admins • #admin*
+ᰔᩚ *${usedPrefix}admins • ${usedPrefix}admin*
 > ✦ Mencionar a los admins para solicitar ayuda.
-ᰔᩚ *#restablecer • #revoke*
+ᰔᩚ *${usedPrefix}restablecer • ${usedPrefix}revoke*
 > ✦ Restablecer el enlace del grupo.
-ᰔᩚ *#grupo • #group* [open / abrir]
+ᰔᩚ *${usedPrefix}grupo • ${usedPrefix}group* [open / abrir]
 > ✦ Cambia ajustes del grupo para que todos los usuarios envien mensaje.
-ᰔᩚ *#grupo • #gruop* [close / cerrar]
+ᰔᩚ *${usedPrefix}grupo • ${usedPrefix}gruop* [close / cerrar]
 > ✦ Cambia ajustes del grupo para que solo los administradores envien mensaje.
-ᰔᩚ *#kick* [número / mension]
+ᰔᩚ *${usedPrefix}kick* [número / mension]
 > ✦ Elimina un usuario de un grupo.
-ᰔᩚ *#add • #añadir • #agregar* [número]
+ᰔᩚ *${usedPrefix}add • ${usedPrefix}añadir • ${usedPrefix}agregar* [número]
 > ✦ Invita a un usuario a tu grupo.
-ᰔᩚ *#promote* [mension / etiquetar]
+ᰔᩚ *${usedPrefix}promote* [mension / etiquetar]
 > ✦ el bot dara administrador al usuario mencionando.
-ᰔᩚ *#demote* [mension / etiquetar]
+ᰔᩚ *${usedPrefix}demote* [mension / etiquetar]
 > ✦ el bot quitara administrador al usuario mencionando.
-ᰔᩚ *#gpbanner • #groupimg*
+ᰔᩚ *${usedPrefix}gpbanner • ${usedPrefix}groupimg*
 > ✦ Cambiar la imagen del grupo.
-ᰔᩚ *#gpname • #groupname*
+ᰔᩚ *${usedPrefix}gpname • ${usedPrefix}groupname*
 > ✦ Cambiar el nombre del grupo.
-ᰔᩚ *#gpdesc • #groupdesc*
+ᰔᩚ *${usedPrefix}gpdesc • ${usedPrefix}groupdesc*
 > ✦ Cambiar la descripción del grupo.
-ᰔᩚ *#advertir • #warn • #warning*
+ᰔᩚ *${usedPrefix}advertir • ${usedPrefix}warn • ${usedPrefix}warning*
 > ✦ Darle una advertencia aún usuario.
-ᰔᩚ ︎*#unwarn • #delwarn*
+ᰔᩚ ︎*${usedPrefix}unwarn • ${usedPrefix}delwarn*
 > ✦ Quitar advertencias.
-ᰔᩚ *#advlist • #listadv*
+ᰔᩚ *${usedPrefix}advlist • ${usedPrefix}listadv*
 > ✦ Ver lista de usuarios advertidos.
-ᰔᩚ *#bot on/off*
+ᰔᩚ *${usedPrefix}bot on/off*
 > ✦ Enciende el bot o Apaga el bot en un grupo.
-ᰔᩚ *#encuesta • #poll*
+ᰔᩚ *${usedPrefix}encuesta • ${usedPrefix}poll*
 > ✦ Crea una encuesta.
-ᰔᩚ *#delete • #del*
+ᰔᩚ *${usedPrefix}delete • ${usedPrefix}del*
 > ✦ Elimina mensaje de otros usuarios.
-ᰔᩚ *#fantasmas*
+ᰔᩚ *${usedPrefix}fantasmas*
 > ✦ Ver lista de inactivos del grupo.
-ᰔᩚ *#kickfantasmas*
+ᰔᩚ *${usedPrefix}kickfantasmas*
 > ✦ Elimina a los inactivos del grupo.
-ᰔᩚ *#invocar • #tagall • #todos*
+ᰔᩚ *${usedPrefix}invocar • ${usedPrefix}tagall • ${usedPrefix}todos*
 > ✦ Invoca a todos los usuarios de un grupo.
-ᰔᩚ *#setemoji • #setemo*
+ᰔᩚ *${usedPrefix}setemoji • ${usedPrefix}setemo*
 > ✦ Cambia el emoji que se usa en la invitación de usuarios.
-ᰔᩚ *#listnum • #kicknum*
+ᰔᩚ *${usedPrefix}listnum • ${usedPrefix}kicknum*
 > ✦ Elimine a usuario por el prefijo de país.
 
 • :･ﾟ⊹˚• \`『 Anime 』\` •˚⊹:･ﾟ•
 
 ❍ Comandos de reacciones de anime.
-ᰔᩚ *#angry • #enojado* + <mencion>
+ᰔᩚ *${usedPrefix}angry • ${usedPrefix}enojado* + <mencion>
 > ✦ Estar enojado
-ᰔᩚ *#bite* + <mencion>
+ᰔᩚ *${usedPrefix}bite* + <mencion>
 > ✦ Muerde a alguien
-ᰔᩚ *#bleh* + <mencion>
+ᰔᩚ *${usedPrefix}bleh* + <mencion>
 > ✦ Sacar la lengua
-ᰔᩚ *#blush* + <mencion>
+ᰔᩚ *${usedPrefix}blush* + <mencion>
 > ✦ Sonrojarte
-ᰔᩚ *#bored • #aburrido* + <mencion>
+ᰔᩚ *${usedPrefix}bored • ${usedPrefix}aburrido* + <mencion>
 > ✦ Estar aburrido
-ᰔᩚ *#cry* + <mencion>
+ᰔᩚ *${usedPrefix}cry* + <mencion>
 > ✦ Llorar por algo o alguien
-ᰔᩚ *#cuddle* + <mencion>
+ᰔᩚ *${usedPrefix}cuddle* + <mencion>
 > ✦ Acurrucarse
-ᰔᩚ *#dance* + <mencion>
+ᰔᩚ *${usedPrefix}dance* + <mencion>
 > ✦ Sacate los pasitos prohíbidos
-ᰔᩚ *#drunk* + <mencion>
+ᰔᩚ *${usedPrefix}drunk* + <mencion>
 > ✦ Estar borracho
-ᰔᩚ *#eat • #comer* + <mencion>
+ᰔᩚ *${usedPrefix}eat • ${usedPrefix}comer* + <mencion>
 > ✦ Comer algo delicioso
-ᰔᩚ *#facepalm* + <mencion>
+ᰔᩚ *${usedPrefix}facepalm* + <mencion>
 > ✦ Darte una palmada en la cara
-ᰔᩚ *#happy • #feliz* + <mencion>
+ᰔᩚ *${usedPrefix}happy • ${usedPrefix}feliz* + <mencion>
 > ✦ Salta de felicidad
-ᰔᩚ *#hug* + <mencion>
+ᰔᩚ *${usedPrefix}hug* + <mencion>
 > ✦ Dar un abrazo
-ᰔᩚ *#impregnate • #preg* + <mencion>
+ᰔᩚ *${usedPrefix}impregnate • ${usedPrefix}preg* + <mencion>
 > ✦ Embarazar a alguien
-ᰔᩚ *#kill* + <mencion>
+ᰔᩚ *${usedPrefix}kill* + <mencion>
 > ✦ Toma tu arma y mata a alguien
-ᰔᩚ *#kiss • #besar* • #kiss2 + <mencion>
+ᰔᩚ *${usedPrefix}kiss • ${usedPrefix}besar* • ${usedPrefix}kiss2 + <mencion>
 > ✦ Dar un beso
-ᰔᩚ *#laugh* + <mencion>
+ᰔᩚ *${usedPrefix}laugh* + <mencion>
 > ✦ Reírte de algo o alguien
-ᰔᩚ *#lick* + <mencion>
+ᰔᩚ *${usedPrefix}lick* + <mencion>
 > ✦ Lamer a alguien
-ᰔᩚ *#love • #amor* + <mencion>
+ᰔᩚ *${usedPrefix}love • ${usedPrefix}amor* + <mencion>
 > ✦ Sentirse enamorado
-ᰔᩚ *#pat* + <mencion>
+ᰔᩚ *${usedPrefix}pat* + <mencion>
 > ✦ Acaricia a alguien
-ᰔᩚ *#poke* + <mencion>
+ᰔᩚ *${usedPrefix}poke* + <mencion>
 > ✦ Picar a alguien
-ᰔᩚ *#pout* + <mencion>
+ᰔᩚ *${usedPrefix}pout* + <mencion>
 > ✦ Hacer pucheros
-ᰔᩚ *#punch* + <mencion>
+ᰔᩚ *${usedPrefix}punch* + <mencion>
 > ✦ Dar un puñetazo
-ᰔᩚ *#run* + <mencion>
+ᰔᩚ *${usedPrefix}run* + <mencion>
 > ✦ Correr
-ᰔᩚ *#sad • #triste* + <mencion>
+ᰔᩚ *${usedPrefix}sad • ${usedPrefix}triste* + <mencion>
 > ✦ Expresar tristeza
-ᰔᩚ *#scared* + <mencion>
+ᰔᩚ *${usedPrefix}scared* + <mencion>
 > ✦ Estar asustado
-ᰔᩚ *#seduce* + <mencion>
+ᰔᩚ *${usedPrefix}seduce* + <mencion>
 > ✦ Seducir a alguien
-ᰔᩚ *#shy • #timido* + <mencion>
+ᰔᩚ *${usedPrefix}shy • ${usedPrefix}timido* + <mencion>
 > ✦ Sentir timidez
-ᰔᩚ *#slap* + <mencion>
+ᰔᩚ *${usedPrefix}slap* + <mencion>
 > ✦ Dar una bofetada
-ᰔᩚ *#dias • #days*
+ᰔᩚ *${usedPrefix}dias • ${usedPrefix}days*
 > ✦ Darle los buenos días a alguien 
-ᰔᩚ *#noches • #nights*
+ᰔᩚ *${usedPrefix}noches • ${usedPrefix}nights*
 > ✦ Darle las buenas noches a alguien 
-ᰔᩚ *#sleep* + <mencion>
+ᰔᩚ *${usedPrefix}sleep* + <mencion>
 > ✦ Tumbarte a dormir
-ᰔᩚ *#smoke* + <mencion>
+ᰔᩚ *${usedPrefix}smoke* + <mencion>
 > ✦ Fumar
-ᰔᩚ *#think* + <mencion>
+ᰔᩚ *${usedPrefix}think* + <mencion>
 > ✦ Pensar en algo
 
 • :･ﾟ⊹˚• \`『 NSFW 』\` •˚⊹:･ﾟ•
 
 ❍ Comandos NSFW (Contenido para adultos)
-ᰔᩚ *#anal* + <mencion>
+ᰔᩚ *${usedPrefix}anal* + <mencion>
 > ✦ Hacer un anal
-ᰔᩚ *#waifu*
+ᰔᩚ *${usedPrefix}waifu*
 > ✦ Buscá una waifu aleatorio.
-ᰔᩚ *#bath* + <mencion>
+ᰔᩚ *${usedPrefix}bath* + <mencion>
 > ✦ Bañarse
-ᰔᩚ *#blowjob • #mamada • #bj* + <mencion>
+ᰔᩚ *${usedPrefix}blowjob • ${usedPrefix}mamada • ${usedPrefix}bj* + <mencion>
 > ✦ Dar una mamada
-ᰔᩚ *#boobjob* + <mencion>
+ᰔᩚ *${usedPrefix}boobjob* + <mencion>
 > ✦ Hacer una rusa
-ᰔᩚ *#cum* + <mencion>
+ᰔᩚ *${usedPrefix}cum* + <mencion>
 > ✦ Venirse en alguien.
-ᰔᩚ *#fap* + <mencion>
+ᰔᩚ *${usedPrefix}fap* + <mencion>
 > ✦ Hacerse una paja
-ᰔᩚ *#ppcouple • #ppcp*
+ᰔᩚ *${usedPrefix}ppcouple • ${usedPrefix}ppcp*
 > ✦ Genera imagenes para amistades o parejas.
-ᰔᩚ *#footjob* + <mencion>
+ᰔᩚ *${usedPrefix}footjob* + <mencion>
 > ✦ Hacer una paja con los pies
-ᰔᩚ *#fuck • #coger • #fuck2* + <mencion>
+ᰔᩚ *${usedPrefix}fuck • ${usedPrefix}coger • ${usedPrefix}fuck2* + <mencion>
 > ✦ Follarte a alguien
-ᰔᩚ *#cafe • #coffe*
+ᰔᩚ *${usedPrefix}cafe • ${usedPrefix}coffe*
 > ✦ Tomate un cafecito con alguien
-ᰔᩚ *#violar • #perra + <mencion>
+ᰔᩚ *${usedPrefix}violar • ${usedPrefix}perra + <mencion>
 > ✦ Viola a alguien
-ᰔᩚ *#grabboobs* + <mencion>
+ᰔᩚ *${usedPrefix}grabboobs* + <mencion>
 > ✦ Agarrrar tetas
-ᰔᩚ *#grop* + <mencion>
+ᰔᩚ *${usedPrefix}grop* + <mencion>
 > ✦ Manosear a alguien
-ᰔᩚ *#lickpussy* + <mencion>
+ᰔᩚ *${usedPrefix}lickpussy* + <mencion>
 > ✦ Lamer un coño
-ᰔᩚ *#rule34 • #r34* + [Tags]
+ᰔᩚ *${usedPrefix}rule34 • ${usedPrefix}r34* + [Tags]
 > ✦ Buscar imagenes en Rule34
-ᰔᩚ *#sixnine • #69* + <mencion>
+ᰔᩚ *${usedPrefix}sixnine • ${usedPrefix}69* + <mencion>
 > ✦ Haz un 69 con alguien
-ᰔᩚ *#spank • #nalgada* + <mencion>
+ᰔᩚ *${usedPrefix}spank • ${usedPrefix}nalgada* + <mencion>
 > ✦ Dar una nalgada
-ᰔᩚ *#suckboobs* + <mencion>
+ᰔᩚ *${usedPrefix}suckboobs* + <mencion>
 > ✦ Chupar tetas
-ᰔᩚ *#undress • #encuerar* + <mencion>
+ᰔᩚ *${usedPrefix}undress • ${usedPrefix}encuerar* + <mencion>
 > ✦ Desnudar a alguien
-ᰔᩚ *#yuri • #tijeras* + <mencion>
+ᰔᩚ *${usedPrefix}yuri • ${usedPrefix}tijeras* + <mencion>
 > ✦ Hacer tijeras.
 
 • :･ﾟ⊹˚• \`『 Juegos 』\` •˚⊹:･ﾟ•
 
 ❍ Comandos de juegos para jugar con rus amigos.
-ᰔᩚ *#amistad • #amigorandom* 
+ᰔᩚ *${usedPrefix}amistad • ${usedPrefix}amigorandom* 
 > ✦ hacer amigos con un juego. 
-ᰔᩚ *#chaqueta • #jalamela*
+ᰔᩚ *${usedPrefix}chaqueta • ${usedPrefix}jalamela*
 > ✦ Hacerte una chaqueta.
-ᰔᩚ *#chiste*
+ᰔᩚ *${usedPrefix}chiste*
 > ✦ el bot te cuenta un chiste.
-ᰔᩚ *#consejo* 
+ᰔᩚ *${usedPrefix}consejo* 
 > ✦ el bot te da un consejo. 
-ᰔᩚ *#doxeo • #doxear* + <mencion>
+ᰔᩚ *${usedPrefix}doxeo • ${usedPrefix}doxear* + <mencion>
 > ✦ Simular un doxeo falso.
-ᰔᩚ *#facto*
+ᰔᩚ *${usedPrefix}facto*
 > ✦ el bot te lanza un facto. 
-ᰔᩚ *#formarpareja*
+ᰔᩚ *${usedPrefix}formarpareja*
 > ✦ Forma una pareja. 
-ᰔᩚ *#formarpareja5*
+ᰔᩚ *${usedPrefix}formarpareja5*
 > ✦ Forma 5 parejas diferentes.
-ᰔᩚ *#frase*
+ᰔᩚ *${usedPrefix}frase*
 > ✦ el bot te da una frase.
-ᰔᩚ *#huevo*
+ᰔᩚ *${usedPrefix}huevo*
 > ✦ Agarrale el huevo a alguien.
-ᰔᩚ *#chupalo* + <mencion>
+ᰔᩚ *${usedPrefix}chupalo* + <mencion>
 > ✦ Hacer que un usuario te la chupe.
-ᰔᩚ *#aplauso* + <mencion>
+ᰔᩚ *${usedPrefix}aplauso* + <mencion>
 > ✦ Aplaudirle a alguien.
-ᰔᩚ *#marron* + <mencion>
+ᰔᩚ *${usedPrefix}marron* + <mencion>
 > ✦ Burlarte del color de piel de un usuario. 
-ᰔᩚ *#suicidar*
+ᰔᩚ *${usedPrefix}suicidar*
 > ✦ Suicidate. 
-ᰔᩚ *#iq • #iqtest* + <mencion>
+ᰔᩚ *${usedPrefix}iq • ${usedPrefix}iqtest* + <mencion>
 > ✦ Calcular el iq de alguna persona. 
-ᰔᩚ *#meme*
+ᰔᩚ *${usedPrefix}meme*
 > ✦ el bot te envía un meme aleatorio. 
-ᰔᩚ *#morse*
+ᰔᩚ *${usedPrefix}morse*
 > ✦ Convierte un texto a codigo morse. 
-ᰔᩚ *#nombreninja*
+ᰔᩚ *${usedPrefix}nombreninja*
 > ✦ Busca un nombre ninja aleatorio. 
-ᰔᩚ *#personalidad* + <mencion>
+ᰔᩚ *${usedPrefix}personalidad* + <mencion>
 > ✦ el bot busca tu personalidad. 
-ᰔᩚ *#piropo*
+ᰔᩚ *${usedPrefix}piropo*
 > ✦ Lanza un piropo.
-ᰔᩚ *#pregunta*
+ᰔᩚ *${usedPrefix}pregunta*
 > ✦ Hazle una pregunta a el bot.
-ᰔᩚ *#ship • #pareja*
+ᰔᩚ *${usedPrefix}ship • ${usedPrefix}pareja*
 > ✦ el bot te da la probabilidad de enamorarte de una persona. 
-ᰔᩚ *#sorteo*
+ᰔᩚ *${usedPrefix}sorteo*
 > ✦ Empieza un sorteo. 
-ᰔᩚ *#top*
+ᰔᩚ *${usedPrefix}top*
 > ✦ Empieza un top de personas.
-ᰔᩚ *#formartrio* + <mencion>
+ᰔᩚ *${usedPrefix}formartrio* + <mencion>
 > ✦ Forma un trio.
-ᰔᩚ *#ahorcado*
+ᰔᩚ *${usedPrefix}ahorcado*
 > ✦ Diviertete con el bot jugando el juego ahorcado.
-ᰔᩚ *#genio*
+ᰔᩚ *${usedPrefix}genio*
 > ✦ Comienza una pregunta con el genio.
-ᰔᩚ *#mates • #matematicas*
+ᰔᩚ *${usedPrefix}mates • ${usedPrefix}matematicas*
 > ✦ Responde las preguntas de matemáticas para ganar recompensas.
-ᰔᩚ *#ppt*
+ᰔᩚ *${usedPrefix}ppt*
 > ✦ Juega piedra papel o tijeras con el bot.
-ᰔᩚ *#sopa • #buscarpalabra*
+ᰔᩚ *${usedPrefix}sopa • ${usedPrefix}buscarpalabra*
 > ✦ Juega el famoso juego de sopa de letras.
-ᰔᩚ *#pvp • #suit* + <mencion>
+ᰔᩚ *${usedPrefix}pvp • ${usedPrefix}suit* + <mencion>
 > ✦ Juega un pvp contra otro usuario.
-ᰔᩚ *#ttt*
+ᰔᩚ *${usedPrefix}ttt*
 > ✦ Crea una sala de juego.
   `.trim();
 
