@@ -8,7 +8,7 @@ let handler = async (m, { conn, args }) => {
     let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
     
     let txt = `
-    𝐇𝐨𝐥𝐚! 𝐒𝐨𝐲 *${botname}* ${(conn.user.jid == global.conn.user.jid ? '' : '(𝐒𝐮𝐛-𝐁𝐨𝐭)')}
+    𝐇𝐨𝐥𝐚! 𝐒𝐨𝐲 *${botname}* ${(conn.user.jid == global.conn.user.jid ? 'Principal 🜲' : '(Sub-bot)')}
 ᴀǫᴜɪ ᴛɪᴇɴᴇs ʟᴀ ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs
 ╭┈ ↷
 │ ✐ 𝓓𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓭 𝓫𝔂 𝗔𝗻𝗴𝘅𝗹𝗞𝗶𝗻𝗴𝟳 🜲
