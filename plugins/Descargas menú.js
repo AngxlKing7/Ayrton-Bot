@@ -37,7 +37,7 @@ ${greeting} *${name}*, ¿Qué deseas escuchar este día?
   `
 
   // URL de la imagen
-  let imageUrl = 'https://files.catbox.moe/fat6wu.jpg'
+  let imageUrl = 'https://files.catbox.moe/j0ftmj.jpg'
   
   // Enviar mensaje con imagen y texto del menú
   await conn.sendFile(m.chat, imageUrl, 'thumbnail.jpg', menuText.trim(), m)

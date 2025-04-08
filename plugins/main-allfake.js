@@ -36,7 +36,7 @@ global.namechannel2 = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭 • Update'
 global.namegrupo = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭 • Test'
 global.namecomu = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭'
 global.listo = '❮✦❯ *Aquí tienes ฅ^•ﻌ•^ฅ*'
-global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://files.catbox.moe/xr2m6u.jpg')
+global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://files.catbox.moe/j0ftmj.jpg')
 
 //Ids channel
 global.canalIdM = ["120363402095978084@newsletter", "120363402095978084@newsletter"]
@@ -77,7 +77,7 @@ var canal = 'https://whatsapp.com/channel/0029VbAmwbQBqbr587Zkni1a'
 let canal2 = 'https://whatsapp.com/channel/0029VbAWcEaEVccLxniy4J2O'
 var git = 'https://github.com/Angxlking7'
 var github = 'https://github.com/Angxlking7/Ayrton-Bot' 
-let correo = 'chiquepapa@gmail.com'
+let correo = 'angelcortes7x@gmail.com'
 
 global.redes = [canal, canal2, git, github, correo].getRandom()
 

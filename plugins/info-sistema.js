@@ -66,7 +66,7 @@ ${diskSpace ? `
 handler.help = ['sistema'];
 handler.tags = ['info'];
 handler.command = ['system', 'sistema'];
-handler.register = true;
+handler.register = false;
 
 export default handler;
 

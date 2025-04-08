@@ -33,7 +33,7 @@ var handler = async (m, { conn, args }) => {
     let cpu = await osu.cpu.usage()
     let cpuTexto = `💾 *CPU:* ${cpu.toFixed(2)}%`
     
-    let versionBot = "AB v2.0"
+    let versionBot = "Ayrton v2.1"
 
     let texto = `
 ╭───────────────❀
@@ -60,7 +60,7 @@ var handler = async (m, { conn, args }) => {
 ${url ? `📡 *Enlace:* ${url}` : ''}
 `.trim()
 
-    await conn.sendFile(m.chat, "https://files.catbox.moe/fat6wu.jpg", '2B.jpg', texto, null)
+    await conn.sendFile(m.chat, "https://files.catbox.moe/j0ftmj.jpg", '2B.jpg', texto, null)
 }
 
 handler.help = ['ping']

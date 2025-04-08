@@ -116,6 +116,7 @@ const handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, i
 
     case 'modoadmin':
     case 'soloadmin':
+    case 'onlyadmin':
       if (m.isGroup) {
         if (!(isAdmin || isOwner)) {
           global.dfail('admin', m, conn);

@@ -72,26 +72,17 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 
     const search = await yts(text);
     if (!search.all || search.all.length === 0) {
-      return m.reply('╭───────────⩊\n│  No se encontraron resultados.\n╰───────────⩊');
+      return m.reply('No se encontraron resultados.');
     }
 
     const videoInfo = search.all[0];
     const { title, thumbnail, timestamp, views, ago, url } = videoInfo;
-    const infoMessage = `╭───────────────⩊\n` +
-                        `│ ✦ 𝙈𝙪𝙨𝙞𝙘 𝙇𝙞𝙣𝙠 ✦\n` +
-                        `├───────────────⩊\n` +
-                        `│ ✦  Título: ${title}\n` +
-                        `│ ✦  Vistas: ${views}\n` +
-                        `│ ✦  Duración: ${timestamp}\n` +
-                        `│ ✦  Publicado: ${ago}\n` +
-                        `│ ✦  URL: ${url}\n` +
-                        `╰───────────────⩊\n` +
-                        `✦ Descargando música, por favor espera...`;
+    const infoMessage = `「✦」Descargando *<${title}>*\n\n> ✦ Canal » *${videoInfo.author.name || 'Desconocido'}*\n> ✰ Vistas » *${views}*\n> ⴵ Duración » *${timestamp}*\n> ✐ Publicación » *${ago}*\n> 🜸 Link » ${url}\n`;
 
     const thumb = (await conn.getFile(thumbnail))?.data;
 
-    const packname = 'MusicBot'; 
-    const dev = 'Desarrollado por DevTeam';
+    const packname = 'Ayrton-Bot'; 
+    const dev = 'Desarrollado por AngxlKing7';
 
     const JT = {
       contextInfo: {
@@ -118,17 +109,15 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
       mimetype: "audio/mpeg" 
     }, { quoted: m });
 
-    await conn.reply(m.chat, '╭───────────⩊\n│  Música lista para escuchar.\n╰───────────⩊', m);
-
   } catch (error) { 
-    return m.reply(`╭───────────⩊\n│  ✦ Error: ${error.message}\n╰───────────⩊`); 
+    return m.reply(`✦ Error: ${error.message}\n`); 
   } 
 };
 
-handler.command = ['play5'];
+handler.command = ['ytaudio'];
 handler.help = ['play5'];
 handler.tags = ['downloader'];
 handler.group = true;
-handler.register = true;
+handler.register = false;
 
 export default handler;

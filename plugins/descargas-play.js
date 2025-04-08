@@ -47,7 +47,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 
     await conn.reply(m.chat, infoMessage, m, JT)
 
-    if (command === 'play' || command === 'yta' || command === 'ytmp3' || command === 'ytaudio') {
+    if (command === 'play' || command === 'yta' || command === 'ytmp3') {
       try {
         const api = await (await fetch(`https://api.vreden.my.id/api/ytmp3?url=${url}`)).json()
         const resulta = api.result
@@ -81,7 +81,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 }
 
-handler.command = handler.help = ['play', 'yta', 'ytmp3', 'play2', 'ytv', 'ytmp4', 'ytaudio']
+handler.command = handler.help = ['play', 'yta', 'ytmp3', 'play2', 'ytv', 'ytmp4']
 handler.tags = ['descargas']
 handler.group = true
 

@@ -35,7 +35,6 @@ ${description}
 
 ☆ *Experiencia* » ${exp.toLocaleString()}
 ❖ *Nivel* » ${nivel}
-✎ Rango » ${role}
 
 ⛁ *Coins Cartera* » ${coins.toLocaleString()} ${moneda}
 ⛃ *Coins Banco* » ${bankCoins.toLocaleString()} ${moneda}

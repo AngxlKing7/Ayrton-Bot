@@ -73,7 +73,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 
     // Respuesta inicial con emoji de verificación ✅
-    await conn.reply(m.chat, 'Preparando archivo | Ya se esta enviando...', m);
+    await conn.reply(m.chat, 'Ya se esta enviando...', m);
 
     const search = await yts(text);
     if (!search.all || search.all.length === 0) {
@@ -83,7 +83,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     const videoInfo = search.all[0];
     const { title, thumbnail, timestamp, views, ago, url } = videoInfo;
     const vistas = formatViews(views);
-    const infoMessage = `*𖹭.╭╭ִ╼࣪━ִﮩ٨ـﮩ♡̫𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭♡ִ̫ﮩ٨ـﮩ━ִ╾࣪╮╮.𖹭*\n> ♡ *Título:* ${title}*\n> ♡ *Duración:* ${timestamp}\n> ♡ *Vistas:* ${vistas}\n> ♡ *Canal:* ${videoInfo.author.name || 'Desconocido'}\n> ♡ *Publicado:* ${ago}\n> ♡ *Enlace:* ${url}\n*⏝ּׅ︣︢ۛ۫۫۫۫۫۫ۜ⏝ּׅ︣︢ۛ۫۫۫۫۫۫ۜ⏝ּׅ︣︢ۛ۫۫۫۫۫۫ۜ*`;
+    const infoMessage = `「✦」Descargando *<${title}>*\n\n> ✦ Canal » *${videoInfo.author.name || 'Desconocido'}*\n> ✰ Vistas » *${views}*\n> ⴵ Duración » *${timestamp}*\n> ✐ Publicación » *${ago}*\n> 🜸 Link » ${url}\n`;
     const thumb = (await conn.getFile(thumbnail))?.data;
 
     const JT = {
