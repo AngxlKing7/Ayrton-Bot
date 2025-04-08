@@ -112,7 +112,7 @@ ${leerMas}
 > ✦ Actualiza el Bot a la versión más reciente de GitHub.
 `.trim()
 
-    let pp = 'https://files.catbox.moe/87c2il.jpg'
+    let pp = 'https://files.catbox.moe/fbwswj.jpg'
     await conn.sendFile(m.chat, pp, 'thumbnail.jpg', menuText, m)
 
   } catch (e) {
