@@ -27,9 +27,10 @@ let handler = async (m, { conn }) => {
   let name = await conn.getName(who);
 
   await sendContactArray(conn, m.chat, [
-    [`${suittag}`, `Propietario 👑`, botname, ` cualquier duda o sugerencia mandame msj`, correo, `Mexico, md, bio],
-    [`${conn.user.jid.split('@')[0]}`, `𝐴𝑦𝑟𝑡𝑜𝑛 - 𝐵𝑜𝑡 💙`, packname, dev, correo, `Mexico`, channel, biobot]
-  ], m);
+  [`${suittag}`, `Propietario 👑`, botname, `Cualquier duda o sugerencia mándame msj`, correo, `Mexico`, md, bio],
+  [`${conn.user.jid.split('@')[0]}`, `𝐴𝑦𝑟𝑡𝑜𝑛 - 𝐵𝑜𝑡 💙`, packname, dev, correo, `Mexico`, channel, biobot]
+], m);
+
 }
 
 handler.help = ["creador", "owner"];
