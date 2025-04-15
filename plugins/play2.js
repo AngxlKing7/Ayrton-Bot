@@ -148,7 +148,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 };
 
 handler.help = ['play2'];
-handler.command = ['play2'];
+handler.command = ['play2', 'ytaudio2', 'ytplay2'];
 handler.tags = ['música'];
 handler.register = true;
 
