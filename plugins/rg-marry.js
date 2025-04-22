@@ -20,61 +20,35 @@ function getSpouse(user) {
     return marriages[user] ? `@${marriages[user].split('@')[0]}` : 'Nadie';
 }
 
-const handler = async (m, { conn, command, mentionedJid }) => {
+const handler = async (m, { conn, command }) => {
     const isPropose = /^marry$/i.test(command);
     const isDivorce = /^divorce$/i.test(command);
+    const isAccept = /^si$/i.test(command);
+    const isDecline = /^no$/i.test(command);
 
     const userIsMarried = (user) => marriages[user] !== undefined;
 
     try {
         if (isPropose) {
-            const proposee = m.quoted?.sender || mentionedJid?.[0];
+            const proposee = m.quoted?.sender || m.mentionedJid?.[0];
             const proposer = m.sender;
 
-            // Si es una aceptación
-            if (!proposee && confirmation[proposer]) {
-                throw new Error(`Para aceptar debes usar: *#marry @usuario*`);
-            }
-
-            if (confirmation[proposer] && proposee) {
-                const expectedProposer = confirmation[proposer].proposer;
-                if (proposee !== expectedProposer) {
-                    throw new Error(`La propuesta que tienes pendiente es de @${expectedProposer.split('@')[0]}`);
-                }
-
-                // Aceptación
-                const { timeout } = confirmation[proposer];
-                marriages[proposer] = proposee;
-                marriages[proposee] = proposer;
-                saveMarriages();
-
-                conn.sendMessage(m.chat, {
-                    text: `◎ ─━──━─❖─━──━─ ◎\n¡Se han Casado! ฅ^•ﻌ•^ฅ*:･ﾟ✧\n\n*•.¸♡  @${proposer.split('@')[0]} y @${proposee.split('@')[0]}\n\n\`Felicidades, disfruten de su luna de miel\`\n◎ ─━──━─❖─━──━─ ◎`,
-                    mentions: [proposer, proposee]
-                }, { quoted: m });
-
-                clearTimeout(timeout);
-                delete confirmation[proposer];
-                delete proposals[proposee];
-                return;
-            }
-
-            // Si no hay aceptación, es propuesta
             if (!proposee) {
                 if (userIsMarried(proposer)) {
-                    return await conn.reply(m.chat, `《✧》 Ya estás casado con *@${marriages[proposer].split('@')[0]}*\n> Puedes divorciarte con el comando: *#divorce*`, m, { mentions: [marriages[proposer]] });
+                    return await conn.reply(m.chat, `《✧》 Ya estás casado con *${conn.getName(marriages[proposer])}*\n> Puedes divorciarte con el comando: *#divorce*`, m);
                 } else {
-                    throw new Error('Debes mencionar a alguien para proponer matrimonio.\n> Ejemplo » *#marry @usuario*');
+                    throw new Error('Debes mencionar a alguien para aceptar o proponer matrimonio.\n> Ejemplo » *#marry @usuario*');
                 }
             }
-
-            if (userIsMarried(proposer)) throw new Error(`Ya estás casado con @${marriages[proposer].split('@')[0]}.`);
-            if (userIsMarried(proposee)) throw new Error(`@${proposee.split('@')[0]} ya está casado con @${marriages[proposee].split('@')[0]}.`);
+            if (userIsMarried(proposer)) throw new Error(`Ya estás casado con ${conn.getName(marriages[proposer])}.`);
+            if (userIsMarried(proposee)) throw new Error(`${conn.getName(proposee)} ya está casado con ${conn.getName(marriages[proposee])}.`);
             if (proposer === proposee) throw new Error('¡No puedes proponerte matrimonio a ti mismo!');
 
             proposals[proposer] = proposee;
-            const confirmationMessage = `ᥫᩣ @${proposer.split('@')[0]} te ha propuesto matrimonio @${proposee.split('@')[0]} ¿aceptas? ʕ•ᴥ•ʔ\n\n*Debes responder con:*\n> ✎ Aceptar » *#marry @${proposer.split('@')[0]}*`;
-            await conn.reply(m.chat, confirmationMessage, m, { mentions: [proposer, proposee] });
+            const proposerName = conn.getName(proposer);
+            const proposeeName = conn.getName(proposee);
+            const confirmationMessage = `ᥫᩣ ${proposerName} te ha propuesto matrimonio. ${proposeeName}  ¿aceptas? ʕ•ᴥ•ʔ\n\n*Debes responder con:*\n> ✎ *#si* » para aceptar\n> ✎ *#no* » para rechazar.`;
+            await conn.reply(m.chat, confirmationMessage, m, { mentions: [proposee, proposer] });
 
             confirmation[proposee] = {
                 proposer,
@@ -91,7 +65,29 @@ const handler = async (m, { conn, command, mentionedJid }) => {
             delete marriages[partner];
             saveMarriages();
 
-            await conn.reply(m.chat, `✐ @${m.sender.split('@')[0]} y @${partner.split('@')[0]} se han divorciado. ×᷼×`, m, { mentions: [m.sender, partner] });
+            await conn.reply(m.chat, `✐ ${conn.getName(m.sender)} y ${conn.getName(partner)} se han divorciado. ×᷼×`, m);
+        } else if (isAccept) {
+            if (!(m.sender in confirmation)) throw new Error('No tienes ninguna propuesta de matrimonio pendiente.');
+
+            const { proposer, timeout } = confirmation[m.sender];
+
+            delete proposals[proposer];
+            marriages[proposer] = m.sender;
+            marriages[m.sender] = proposer;
+            saveMarriages();
+
+            conn.sendMessage(m.chat, { text: `◎ ─━──━─❖─━──━─ ◎\n¡Se han Casado! ฅ^•ﻌ•^ฅ*:･ﾟ✧\n\n*•.¸♡  ${conn.getName(proposer)} y ${conn.getName(m.sender)}\n\n\`Felizidades Disfruten de su luna de miel\`\n◎ ─━──━─❖─━──━─ ◎`, mentions: [proposer, m.sender] }, { quoted: m });
+
+            clearTimeout(timeout);
+            delete confirmation[m.sender];
+        } else if (isDecline) {
+            if (!(m.sender in confirmation)) throw new Error('No tienes ninguna propuesta de matrimonio pendiente.');
+
+            const { timeout } = confirmation[m.sender];
+            clearTimeout(timeout);
+            delete confirmation[m.sender];
+
+            await conn.sendMessage(m.chat, { text: '*《✧》Han rechazado tu propuesta de matrimonio.*' }, { quoted: m });
         }
     } catch (error) {
         await conn.reply(m.chat, `《✧》 ${error.message}`, m);
@@ -99,8 +95,8 @@ const handler = async (m, { conn, command, mentionedJid }) => {
 };
 
 handler.tags = ['fun'];
-handler.help = ['marry *@usuario*', 'divorce'];
-handler.command = ['marry', 'divorce'];
+handler.help = ['marry *@usuario*', 'divorce', 'si', 'no'];
+handler.command = ['marry', 'divorce', 'si', 'no', 'perfil'];
 handler.group = true;
 
 export default handler;
