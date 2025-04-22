@@ -101,7 +101,7 @@ global.taguser = '@' + m.sender.split("@s.whatsapp.net")
 var more = String.fromCharCode(8206)
 global.readMore = more.repeat(850)
 
-global.packsticker = `┊ Ayrton Team\n⤷ https://ayrton.bot.nu/\n\n┊INFO 👹\n ⤷ ayrton.bot.nu/discord`;
+global.packsticker = `┊ Speed3xz Team\n⤷ https://ayrton.bot.nu/\n\n┊INFO 👹\n ⤷ ayrton.bot.nu/discord`;
 global.packsticker2 = `┊Bot 👑\n┊⤷${botname} \n\n┊Usuario:\n┊⤷${nombre}`
   
 //Fakes
@@ -111,7 +111,7 @@ global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo
 }}, { quoted: m }
 
 global.icono = [
-'https://qu.ax/NCBzm.jpeg',
+'https://files.catbox.moe/ebr65k.jpg',
 ].getRandom()
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name, }, externalAdReply: { showAdAttribution: true, title: packname, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
