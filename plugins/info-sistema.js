@@ -21,8 +21,6 @@ const getDiskSpace = () => {
     }
 };
 
-let serverName = bot.isSubBot ? 'Ayrton-2' : 'Ayrton-1'
-
 const handler = async (m, { conn }) => {
     const totalMem = os.totalmem();
     const freeMem = os.freemem();
@@ -37,7 +35,7 @@ const handler = async (m, { conn }) => {
 
     const message = `${done} *ESTADO DEL SISTEMA*
 
-⚜️ *Host ⪼* ${serverName}
+⚜️ *Host ⪼* ${hostname}
 🏆 *Plataforma ⪼* ${platform}
 💫 *Arquitectura ⪼* ${arch}
 🥷 *RAM Total ⪼* ${formatBytes(totalMem)}
@@ -66,7 +64,7 @@ ${diskSpace ? `
 handler.help = ['sistema'];
 handler.tags = ['info'];
 handler.command = ['system', 'sistema'];
-handler.register = false;
+handler.register = true;
 
 export default handler;
 

@@ -1,8 +1,20 @@
 import moment from 'moment-timezone';
 import PhoneNumber from 'awesome-phonenumber';
 import fetch from 'node-fetch';
+import fs from 'fs';
+
+const loadMarriages = () => {
+    if (fs.existsSync('./src/database/marry.json')) {
+        const data = JSON.parse(fs.readFileSync('./src/database/marry.json', 'utf-8'));
+        global.db.data.marriages = data;
+    } else {
+        global.db.data.marriages = {};
+    }
+};
 
 let handler = async (m, { conn, args }) => {
+    loadMarriages();
+
     let userId;
     if (m.quoted && m.quoted.sender) {
         userId = m.quoted.sender;
@@ -15,30 +27,34 @@ let handler = async (m, { conn, args }) => {
     let name = conn.getName(userId);
     let cumpleanos = user.birth || 'No especificado';
     let genero = user.genre || 'No especificado';
-    let pareja = user.marry || 'Nadie';
     let description = user.description || 'Sin Descripción';
     let exp = user.exp || 0;
     let nivel = user.level || 0;
-    let role = user.role || 'Sin Rango';
-    let coins = user.coin || 0;
-    let bankCoins = user.bank || 0;
+    let role = user.role || 'Esclavo';
+    let llamas = user.llama || 0;
+    let bankllamas = user.bank || 0;
 
-    let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://files.catbox.moe/xr2m6u.jpg');
+    let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://qu.ax/ESiZc.jpg');
+
+    let isMarried = userId in global.db.data.marriages;
+    let partner = isMarried ? global.db.data.marriages[userId] : null;
+    let partnerName = partner ? conn.getName(partner) : 'Nadie';
 
     let profileText = `
-「✿」 *Perfil* ◢@${userId.split('@')[0]}◤
+「👑」 *Perfil* ✰@${userId.split('@')[0]}✰
 ${description}
 
-✦ Edad » ${user.age || 'Desconocida'}
-♛ *Cumpleaños* » ${cumpleanos}
-⚥ *Género* » ${genero}
+✎ Edad » ${user.age || 'Desconocida'}
+✎ *Cumpleaños* » ${cumpleanos}
+✎ *Género* » ${genero}
+✎ Casado con » ${isMarried ? partnerName : 'Nadie'}
 
-☆ *Experiencia* » ${exp.toLocaleString()}
-❖ *Nivel* » ${nivel}
+♛ *Experiencia* » ${exp.toLocaleString()}
+♛ *Nivel* » ${nivel}
 
-⛁ *Coins Cartera* » ${coins.toLocaleString()} ${moneda}
-⛃ *Coins Banco* » ${bankCoins.toLocaleString()} ${moneda}
-❁ *Premium* » ${user.premium ? '✅' : '❌'}
+⛁ *llamas Cartera* » ${llamas.toLocaleString()} ${moneda}
+⛃ *llamas Banco* » ${bankllamas.toLocaleString()} ${moneda}
+✰ *Premium* » ${user.premium ? '✅' : '❌'}
   `.trim();
 
     await conn.sendMessage(m.chat, { 
@@ -46,7 +62,7 @@ ${description}
         contextInfo: {
             mentionedJid: [userId],
             externalAdReply: {
-                title: '✧ Perfil de Usuario ✧',
+                title: '✰ Perfil de Usuario ✰',
                 body: dev,
                 thumbnailUrl: perfil,
                 mediaType: 1,
@@ -60,5 +76,7 @@ ${description}
 handler.help = ['profile'];
 handler.tags = ['rg'];
 handler.command = ['profile', 'perfil'];
+handler.register = true;
+handler.group = true;
 
 export default handler;

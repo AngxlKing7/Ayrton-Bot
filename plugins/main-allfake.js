@@ -28,20 +28,20 @@ console.log(`Error : ${e}`)
 }}
   
 //creador y otros
-global.creador = 'Wa.me/5215665619261'
+global.creador = 'Wa.me/525665619261'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
-global.asistencia = 'Wa.me/52156659261'
-global.namechannel = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭 • Avisos'
-global.namechannel2 = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭 • Update'
-global.namegrupo = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭 • Test'
+global.asistencia = 'Wa.me/525665619261'
+global.namechannel = '𝗦𝗽𝗲𝗲𝗱𝟯𝘅𝘇 𝗧𝗲𝗮𝗺'
+global.namechannel2 = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭 👑ᬊᬁ"'
+global.namegrupo = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭'
 global.namecomu = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭'
-global.listo = '❮✦❯ *Aquí tienes ฅ^•ﻌ•^ฅ*'
-global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://files.catbox.moe/j0ftmj.jpg')
+global.listo = '⚡ *ᴀǫᴜɪ ᴛɪᴇɴᴇs ˙Ⱉ˙ฅ*'
+global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://files.catbox.moe/ebr65k.jpg')
 
-//Ids channel
-global.canalIdM = ["120363402095978084@newsletter", "120363402095978084@newsletter"]
-global.canalNombreM = ["𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭 • Avisos", "𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭 • Update"]
-global.channelRD = await getRandomChannel()
+global.idchannel = '120363402095978084@newsletter'
+global.canalIdM = ["120363402095978084@newsletter", "120363419176226452@newsletter"]
+global.canalNombreM = [" 𝑺𝒑𝒆𝒆𝒅𝟑𝒙𝒛 𝑪𝒉𝒂𝒏𝒏𝒆𝒍", "𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭"]
+global.channelRD = await getRandomChannel() 
 
 //fechas
 global.d = new Date(new Date + 3600000)
@@ -101,8 +101,8 @@ global.taguser = '@' + m.sender.split("@s.whatsapp.net")
 var more = String.fromCharCode(8206)
 global.readMore = more.repeat(850)
 
-global.packsticker = `┊ Ayrton Team\n⤷ https://ayrton.bot.nu/\n\n┊INFO 👹\n ⤷ ayrton.bot.nu/discord • ┊Bot 👑\n┊⤷${botname} \n\n┊Usuario:\n┊⤷${nombre}`;
-global.packsticker2 = `\n\n${dev}`
+global.packsticker = `┊ Ayrton Team\n⤷ https://ayrton.bot.nu/\n\n┊INFO 👹\n ⤷ ayrton.bot.nu/discord`;
+global.packsticker2 = `┊Bot 👑\n┊⤷${botname} \n\n┊Usuario:\n┊⤷${nombre}`
   
 //Fakes
 global.fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `6285600793871-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${nombre}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${nombre},;;;\nFN:${nombre},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': null, thumbnail: null,sendEphemeral: true}}}

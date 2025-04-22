@@ -1,33 +1,40 @@
-let handler = async (m, { conn, command, usedPrefix }) => {
-  // Reemplazar la ruta de la imagen por una URL
-  let img = 'https://qu.ax/MuFZT.jpg'; // Coloca aquí tu URL de imagen
+import fs from 'fs';
 
-  let staff = `
-━━━━━━━━━━━━━━━━━━━━━
-       equipo de ayudante 
-━━━━━━━━━━━━━━━━━━━━━
+let handler = async (m, { conn }) => {
+    let img = './src/catalogo.jpg';
 
-✧ *Dueño:* ➣ ${creador}
-✧ *Bot:* ➣ ${botname}
-✧ *Versión:* ➣ ${vs}
-✧ *Librería:* ➣ ${libreria} ${baileys}
+    
+    let creador = [['525665619261', '*AngxlKing7 👑*']];
 
-━━━━━━━━━━━━━━━━━━━━━
+    
+    let staff = [
+        ['527203112316', '*Chilakiles*']
+    ];
 
-   creador de la bot:
+    
+    let staffMessage = "🌟 *Lista de Staff* 🌟\n\n";
+    
+    
+    staffMessage += "*👑 Creador 👑*\n\n";
+    staffMessage += creador.map(([number, name]) => `- ${name}:\n> https://wa.me/${number}\n\n`).join('');
+    
+   
+    staffMessage += "🎩 *Colaboradores* 🎩\n\n";
+    staffMessage += staff.map(([number, name]) => `- ${name}:\n> https://wa.me/${number}\n\n`).join('');
 
-━━━━━━━[ creador ]━━━━━━━
-ᥫ᭡ *AngxlKing7*
-> ✰ *Rol* » *Creador*
-> ✦ *GitHub* » https://github.com/AngxlKing7/Ayrton-bot
-━━━━━━━━━━━━━━━━━━━━━
-`
-  await conn.sendFile(m.chat, img, 'imagen.jpg', staff.trim(), fkontak)
-}
+    
+    if (!fs.existsSync(img)) {
+        console.error(`Error: La imagen ${img} no existe.`);
+        return m.reply("⚠️ Imagen no encontrada.");
+    }
 
-handler.help = ['staff']
-handler.command = ['colaboradores', 'staff']
-handler.register = true
-handler.tags = ['main']
+    
+    await conn.sendFile(m.chat, img, 'staff.jpg', staffMessage.trim(), m, { linkPreview: true });
+};
 
-export default handler
+handler.help = ['staff'];
+handler.command = ['colaboradores', 'staff'];
+handler.register = true;
+handler.tags = ['main'];
+
+export default handler;

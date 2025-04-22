@@ -2,7 +2,7 @@ import axios from 'axios'
 
 let handler = async (m, { conn, text }) => {
 //await m.reply('🧑🏻‍💻 Buscando...')
-let bot = '🍭 Buscando espere un momento....'
+let bot = '👑 Buscando espere un momento....'
 conn.reply(m.chat, bot, m)
   if (!text) return conn.reply(m.chat, `${emoji} Por favor, ingresa una *IP*.`, m)
 
