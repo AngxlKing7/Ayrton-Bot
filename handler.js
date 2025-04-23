@@ -537,9 +537,9 @@ let user2 = m.pushName || 'Anónimo'
 let verifyaleatorio = ['registrar', 'reg', 'verificar', 'verify', 'register'].getRandom()
 
 const msg = {
-rowner: `『✦』El comando *${comando}* solo puede ser usado por los creadores del bot.`, 
-owner: `『✦』El comando *${comando}* solo puede ser usado por los desarrolladores del bot.`, 
-mods: `『✦』El comando *${comando}* solo puede ser usado por los moderadores del bot.`, 
+rowner: `《✦》El comando *${comando}* no existe.\nPara ver la lista de comandos usa:\n» *#help*`, 
+owner: `《✦》El comando *${comando}* no existe.\nPara ver la lista de comandos usa:\n» *#help*`, 
+mods: `《✦》El comando *${comando}* no existe.\nPara ver la lista de comandos usa:\n» *#help*`, 
 premium: `『✦』El comando *${comando}* solo puede ser usado por los usuarios premium.`, 
 group: `『✦』El comando *${comando}* solo puede ser usado en grupos.`,
 private: `『✦』El comando *${comando}* solo puede ser usado al chat privado del bot.`,

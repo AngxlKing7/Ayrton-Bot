@@ -55,9 +55,9 @@ global.packname = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭'
 global.botname = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭'
 global.wm = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭'
 global.author = 'Made by AngelDevz7'
-global.dev = '𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐀𝐧𝐠𝐞𝐥𝐃𝐞𝐯𝐳𝟕'
-global.textbot = '𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭 • 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 𝐀𝐧𝐠𝐞𝐥𝐃𝐞𝐯𝐳𝟕'
-global.etiqueta = '𝐀𝐧𝐠𝐞𝐥𝐃𝐞𝐯𝐳𝟕'
+global.dev = 'Powered by Speed3xz'
+global.textbot = '𝐴𝑦𝑟𝑡𝑜𝑛-𝐵𝑜𝑡 • 𝑃𝑜𝑤𝑒𝑟𝑒𝑑 𝑏𝑦 𝑆𝑝𝑒𝑒𝑑𝟹𝑥𝑧'
+global.etiqueta = '𝗦𝗽𝗲𝗲𝗱𝟯𝘅𝘇'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
