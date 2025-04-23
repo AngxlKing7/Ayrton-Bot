@@ -65,9 +65,12 @@ function convertirMsADiasHorasMinutosSegundos(ms) {
 }
 
 const message = users.map((v, i) => 
-`• [Sub-bot - ${v.user.name ]`).join('\n\n');
+`> ╭───[ Sub-Bot #${i + 1} ]────
+> │ Nombre : ${v.user.name || 'Sub-Bot'}
+> │ Online : ${v.uptime ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) : 'Desconocido'}
+> ╰────────────────────`).join('\n\n');
 
-const responseMessage = `「✦」Lista de bots activos: ${users.length}\n\n${message || 'No hay sub-bots conectados.'}`.trim();
+const responseMessage = `*Ayrton-Bot*\n*Sub-Bots activos*: ${users.length}\n\n${message || 'No hay sub-bots conectados.'}`.trim();
 
 await _envio.sendMessage(m.chat, {text: responseMessage, mentions: _envio.parseMention(responseMessage)}, {quoted: fkontak})
 break   
