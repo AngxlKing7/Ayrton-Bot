@@ -131,7 +131,8 @@ ${leerMas}
 handler.help = ['menuscript', 'dev'] // Añadí 'dev'
 handler.tags = ['main']
 handler.command = ['menuscript', 'dev'] // Añadí 'dev'
-handler.register = false
+handler.register = true
+handler.rowner = true;
 export default handler
 
 function clockString(ms) {
