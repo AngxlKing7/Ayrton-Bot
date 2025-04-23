@@ -1,4 +1,4 @@
-const ro = 30;
+const ro = 5000;
 const handler = async (m, {conn, usedPrefix, command}) => {
   const time = global.db.data.users[m.sender].lastrob2 + 7200000;
   if (new Date - global.db.data.users[m.sender].lastrob2 < 7200000) {
@@ -28,7 +28,7 @@ handler.help = ['rob'];
 handler.tags = ['rpg'];
 handler.command = ['robar', 'steal', 'rob'];
 handler.group = true;
-handler.register = true;
+handler.register = false;
 
 export default handler;
 function msToTime(duration) {

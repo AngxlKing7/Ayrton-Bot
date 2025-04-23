@@ -20,27 +20,27 @@ ${listAdmin}
 
 ˚₊· ͟͟͞͞👑 *CONFIGURACIÓN*
 
-◈ *Welcome:* ${welcome ? '✅' : ''}
-◈ *Detect:* ${detect ? '✅' : '❌'}  
-◈ *Antilink:* ${antiLink ? '✅' : '❌'} 
-◈ *Autoaceptar:* ${autoAceptar ? '✅' : '❌'} 
-◈ *Autorechazar:* ${autoRechazar ? '✅' : '❌'} 
-◈ *Nfsw:* ${nsfw ? '✅' : '❌'} 
-◈ *Antiprivado:* ${antiPrivate ? '✅' : '❌'} 
-◈ *Modoadmin:* ${modoadmin ? '✅' : '❌'} 
-◈ *Antiver:* ${antiviewonce ? '✅' : '❌'} 
-◈ *Reacción* ${reaction ? "✅️" : "❌️"}
-◈ *Antispam:* ${antiSpam ? '✅' : '❌'} 
-◈ *Restrict:* ${restrict ? '✅' : '❌'} 
-◈ *Antitoxic:* ${antiToxic ? '✅' : '❌'} 
-◈ *Antitraba:* ${antiTraba ? '✅' : '❌'} 
+✐ *Welcome* ${welcome ? '✓' : '✗'}
+✐ *Detect:* ${detect ? '✓' : '✗'}  
+✐ *Antilink:* ${antiLink ? '✓' : '✗'} 
+✐ *Autoaceptar:* ${autoAceptar ? '✓' : '✗'} 
+✐ *Autorechazar:* ${autoRechazar ? '✓' : '✗'} 
+✐ *Nfsw:* ${nsfw ? '✓' : '✗'} 
+✐ *Antiprivado:* ${antiPrivate ? '✓' : '✗'} 
+✐ *Modoadmin:* ${modoadmin ? '✓' : '✗'} 
+✐ *Antiver:* ${antiviewonce ? '✓' : '✗'} 
+✐ *Reacción* ${reaction ? "✓️" : "✗️"}
+✐ *Antispam:* ${antiSpam ? '✓' : '✗'} 
+✐ *Restrict:* ${restrict ? '✓' : '✗'} 
+✐ *Antitoxic:* ${antiToxic ? '✓' : '✗'} 
+✐ *Antitraba:* ${antiTraba ? '✓' : '✗'} 
 `.trim();
   conn.sendFile(m.chat, pp, 'img.jpg', text, m, false, {mentions: [...groupAdmins.map((v) => v.id), owner]});
 };
 handler.help = ['infogrupo'];
 handler.tags = ['grupo'];
 handler.command = ['infogrupo', 'gp'];
-handler.register = true
+handler.register = false
 handler.group = true;
 
 export default handler;

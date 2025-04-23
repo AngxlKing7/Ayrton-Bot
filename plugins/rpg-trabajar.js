@@ -8,7 +8,7 @@ const tiempo2 = segundosAHMS(Math.ceil((cooldowns[m.sender] + tiempo * 1000 - Da
 conn.reply(m.chat, `${emoji3} Debes esperar *${tiempo2}* para usar *#w* de nuevo.`, m)
 return
 }
-let rsl = Math.floor(Math.random() * 500)
+let rsl = Math.floor(Math.random() * 5000)
 cooldowns[m.sender] = Date.now()
 await conn.reply(m.chat, `${emoji} ${pickRandom(trabajo)} *${toNum(rsl)}* ( *${rsl}* ) ${moneda} 💸.`, m)
 user.coin += rsl
@@ -18,7 +18,6 @@ handler.help = ['trabajar']
 handler.tags = ['economy']
 handler.command = ['w','work','chambear','chamba', 'trabajar']
 handler.group = true;
-handler.register = true;
 
 export default handler
 
@@ -61,7 +60,7 @@ const trabajo = [
    "Revisas tu bolso y decides vender algunos artículos inútiles que no necesitas. Resulta que toda esa basura valía",
    "Desarrollas juegos para ganarte la vida y ganas",
    "Trabajas todo el día en la empresa por",
-   "Diseñaste un logo para una empresa por",
+   "Mataste a el pendejo que cree que los bots se hacen con Termux por",
    "¡Trabajó lo mejor que pudo en una imprenta que estaba contratando y ganó su bien merecido!",
    "Trabajas como podador de arbustos y ganas",
    "Trabajas como actor de voz para Bob Esponja y te las arreglaste para ganar",

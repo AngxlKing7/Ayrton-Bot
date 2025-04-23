@@ -67,7 +67,7 @@ const ddownr = {
 const handler = async (m, { conn, text, usedPrefix, command }) => { 
   try { 
     if (!text.trim()) { 
-      return conn.reply(m.chat, 'Ingresa el nombre de la música ejemplo: Un scar Victor mendivil', m); 
+      return conn.reply(m.chat, '《✧》Por favor, menciona el nombre o URL del video que deseas descargar', m); 
     }
 
     const search = await yts(text);
@@ -77,12 +77,12 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 
     const videoInfo = search.all[0];
     const { title, thumbnail, timestamp, views, ago, url } = videoInfo;
-    const infoMessage = `「✦」Descargando *<${title}>*\n\n> ✦ Canal » *${videoInfo.author.name || 'Desconocido'}*\n> ✰ Vistas » *${views}*\n> ⴵ Duración » *${timestamp}*\n> ✐ Publicación » *${ago}*\n> 🜸 Link » ${url}\n`;
+    const infoMessage = `「✦」Descargando *<${title}>*\n\n> ✦ Canal » *${videoInfo.author.name || 'Desconocido'}*\n> ⴵ Duración » *${timestamp}*\n> ✰ Calidad: *129k*\n> ✐ Publicación » *${ago}*\n> 🜸 Link » ${url}\n`;
 
     const thumb = (await conn.getFile(thumbnail))?.data;
 
     const packname = 'Ayrton-Bot'; 
-    const dev = 'Desarrollado por AngxlKing7';
+    const dev = 'Desarrollado por speed3xz';
 
     const JT = {
       contextInfo: {
@@ -115,7 +115,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 };
 
 handler.command = ['ytaudio'];
-handler.help = ['play5'];
+handler.help = ['ytaudio'];
 handler.tags = ['downloader'];
 handler.group = true;
 handler.register = false;

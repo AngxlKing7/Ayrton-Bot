@@ -17,8 +17,8 @@ let randomUserId = Object.keys(users)[Math.floor(Math.random() * Object.keys(use
 while (randomUserId === senderId) {
 randomUserId = Object.keys(users)[Math.floor(Math.random() * Object.keys(users).length)]}
 let randomUserCoin = users[randomUserId].coin || 0
-let minAmount = 15
-let maxAmount = 50
+let minAmount = 1000
+let maxAmount = 9000
 let amountTaken = Math.floor(Math.random() * (maxAmount - minAmount + 1)) + minAmount
 let randomOption = Math.floor(Math.random() * 3)
 switch (randomOption) {
@@ -52,7 +52,7 @@ global.db.write()}
 handler.tags = ['rpg']
 handler.help = ['slut']
 handler.command = ['slut', 'protituirse']
-handler.register = true
+handler.register = false
 handler.group = true
 
 export default handler

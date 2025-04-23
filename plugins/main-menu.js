@@ -15,16 +15,17 @@ let handler = async (m, { conn, args }) => {
     let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
     
     let txt = `
-Hola! Soy  *${botname}*  🜲
-Aquí tienes la lista de comandos
+Hola! Soy ${botname} ${(conn.user.jid == global.conn.user.jid ? '­­ㅤ­' : '(Sub-Bot)')}
+ᴀǫᴜɪ ᴛɪᴇɴᴇs ʟᴀ ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs
 ╭┈ ↷
-│ᰔᩚ Usuario » @${userId.split('@')[0]}
-│✦ Bot » ${(conn.user.jid == global.conn.user.jid ? 'Principal 🜲' : 'Sub Bot')}
-│✧ Comandos » ${totalCommands}
-│•——————•Canal Oficial•——————•
-│https://whatsapp.com/channel/0029VbAmwbQBqbr587Zkni1a
+│ ✐ 𝓓𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓭 𝓫𝔂 𝙎𝙥𝙚𝙚𝙙𝟯𝙭𝙯 🕷️
+│ ✐ ꒷ꕤ💎ദ ᴄᴏᴍᴀɴᴅᴏs ෴
+│ https://ayrton.bot.nu/commands
+│ ✐ ꒷ꕤ💎ദ ᴄᴀɴᴀʟ ᴏғɪᴄɪᴀʟ ෴
+│ https://whatsapp.com/channel/0029VbAmwbQBqbr587Zkni1a
 ╰─────────────────
-Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
+
+✐; 💎→ Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
 
 • :･ﾟ⊹˚• \`『 Info-Bot 』\` •˚⊹:･ﾟ•
 
@@ -563,6 +564,7 @@ Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
 handler.help = ['menu'];
 handler.tags = ['main'];
 handler.command = ['menu', 'menú', 'help'];
+handler.group = true;
 
 export default handler;
 

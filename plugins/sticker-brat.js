@@ -1,48 +1,45 @@
 import { sticker } from '../lib/sticker.js';
-import { createCanvas, loadImage, registerFont } from 'canvas';
-import fs from 'fs';
+import axios from 'axios';
 
-const createTextSticker = async (text) => {
-    const width = 512;
-    const height = 512;
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-    const canvas = createCanvas(width, height);
-    const ctx = canvas.getContext('2d');
-
-    // Fondo transparente
-    ctx.clearRect(0, 0, width, height);
-
-    // Texto
-    ctx.fillStyle = '#fff';
-    ctx.font = 'bold 40px Sans'; // Puedes usar cualquier fuente instalada
-
-    // Centrar texto
-    const textWidth = ctx.measureText(text).width;
-    ctx.fillText(text, (width - textWidth) / 2, height / 2);
-
-    return canvas.toBuffer('image/png');
+const fetchSticker = async (text, attempt = 1) => {
+    try {
+        const response = await axios.get(`https://kepolu-brat.hf.space/brat`, {
+            params: { q: text },
+            responseType: 'arraybuffer',
+        });
+        return response.data;
+    } catch (error) {
+        if (error.response?.status === 429 && attempt <= 3) {
+            const retryAfter = error.response.headers['retry-after'] || 5;
+            await delay(retryAfter * 1000);
+            return fetchSticker(text, attempt + 1);
+        }
+        throw error;
+    }
 };
 
 let handler = async (m, { conn, text }) => {
     if (!text) {
         return conn.sendMessage(m.chat, {
-            text: '⚠️ Por favor escribe el texto para el sticker.',
+            text: `${emoji} Por favor ingresa el texto para hacer un sticker.`,
         }, { quoted: m });
     }
 
     try {
-        const imageBuffer = await createTextSticker(text);
-        const stiker = await sticker(imageBuffer, false, global.botname, global.nombre);
-
+        const buffer = await fetchSticker(text);
+        let stiker = await sticker(buffer, false, global.botname, global.nombre);
+        
         if (stiker) {
             return conn.sendFile(m.chat, stiker, 'sticker.webp', '', m);
         } else {
-            throw new Error("No se pudo crear el sticker.");
+            throw new Error("No se pudo generar el sticker.");
         }
     } catch (error) {
         console.error(error);
         return conn.sendMessage(m.chat, {
-            text: `❌ Ocurrió un error: ${error.message}`,
+            text: `${msm} Ocurrió un error: ${error.message}`,
         }, { quoted: m });
     }
 };

@@ -11,13 +11,12 @@ let handler = async (m, { conn, __dirname }) => {
     let leerMas = '\u200e'.repeat(850)
 
     let menuText = `
-*𝐇𝐨𝐥𝐚 ${name}! 𝐒𝐨𝐲 ✦2B✦ (𝐁𝐨𝐭-𝐅𝐞𝐦)*  
+*𝐇𝐨𝐥𝐚! 𝐒𝐨𝐲 𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭*
 ╭─┈↷
-│ ✐ 𝓓𝓮𝓼𝓮𝓻𝓻𝓸𝓵𝓵𝓮𝓭 𝓹𝓸𝓻 Neykoor 💜
-│ ➥ Tiempo activa: *${muptime}*
-│ ✿ Temporada: *1 — El Florecer*  
+│ ✐ 𝐃𝐞𝐬𝐚𝐫𝐫𝐨𝐥𝐥𝐚𝐝𝐨 𝐩𝐨𝐫 𝐀𝐧𝐠𝐱𝐥𝐊𝐢𝐧𝐠𝟕
+│ ➥ Tiempo activo: *${muptime}*
 │ ✐ ꒷ꕤ💎 ᴄᴀɴᴀʟ ᴏғɪᴄɪᴀʟ:
-│ https://whatsapp.com/channel/0029VazHywx0rGiUAYluYB24
+│ https://whatsapp.com/channel/0029VbAmwbQBqbr587Zkni1a
 ╰─────────────────
 ${leerMas}
 》───「 𝗖𝗢𝗠𝗔𝗡𝗗𝗢𝗦 」───《
@@ -79,11 +78,8 @@ ${leerMas}
 > ✦ Reclama tu dulce o truco (Solo en Halloween).
 ᰔᩚ *#christmas • #navidad*
 > ✦ Reclama tu regalo navideño (Solo en Navidad).
-ᰔᩚ *#kurogane*
+ᰔᩚ *#Ayrton*
 > ✦ para recoger materiales oro y hierro
-
- 
-»⊹˚୨ *2B* ⊹
 `.trim()
 
     let pp = 'https://files.catbox.moe/rt7ivf.jpg'
@@ -97,8 +93,7 @@ ${leerMas}
 
 handler.help = ['rpg']
 handler.tags = ['main']
-handler.command = ['rpg128']
-handler.register = false
+handler.command = ['rpg', 'menurpg']
 export default handler
 
 function clockString(ms) {
