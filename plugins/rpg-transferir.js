@@ -21,7 +21,10 @@ async function handler(m, { conn, args, usedPrefix, command }) {
   const mentionText = `@${who.split('@')[0]}`;
   const totalInBank = user[bankType];
 
-  conn.sendMessage(m.chat, {text: `${emoji} Transferiste *${count} ${moneda}* a ${mentionText}\n> Ahora tienes *${totalInBank} ${moneda}* en total en el banco.`, mentions: [who]}, {quoted: m});
+  conn.sendMessage(m.chat, {
+    text: `${emoji} Transferiste *${count.toLocaleString()} ${moneda}* a ${mentionText}\n> Ahora tienes *${totalInBank.toLocaleString()} ${moneda}* en total en el banco.`,
+    mentions: [who]
+  }, {quoted: m});
 }
 
 handler.help = ['pay'];

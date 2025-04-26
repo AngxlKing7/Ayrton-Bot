@@ -4,7 +4,7 @@ var handler = async (m, { conn, text}) => {
 
 conn.reply(m.chat, `${emoji2} Buscando una frase, espere un momento...`, m)
 
-conn.reply(m.chat, `*┏━_͜͡-͜͡-͜͡-͜͡-͜͡-͜͡-͜͡⚘-͜͡-͜͡-͜͡-͜͡-͜͡-͜͡-͜͡⚘-͜͡-͜͡-͜͡-͜͡-͜͡-͜͡-͜͡⚘-͜͡-͜͡-͜͡-͜͡-͜͡-͜͡_͜͡━┓*\n\n❥ *"${pickRandom(global.frases)}"*\n\n*┗━_͜͡-͜͡-͜͡-͜͡-͜͡-͜͡-͜͡⚘-͜͡-͜͡-͜͡-͜͡-͜͡-͜͡-͜͡⚘-͜͡-͜͡-͜͡-͜͡-͜͡-͜͡-͜͡⚘-͜͡-͜͡-͜͡-͜͡-͜͡-͜͡_͜͡━┛*`, m)
+conn.reply(m.chat, `*❥ *"${pickRandom(global.frases)}"*`, m)
 
 }
 handler.help = ['frase']
@@ -13,7 +13,7 @@ handler.command = ['frase']
 handler.fail = null
 handler.exp = 0
 handler.group = true;
-handler.register = true
+handler.register = false
 
 export default handler
 

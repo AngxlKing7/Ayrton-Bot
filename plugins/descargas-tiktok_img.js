@@ -97,7 +97,7 @@ handler.help = ['tiktokimg <url>']
 handler.tags = ['descargas']
 handler.command = ['tiktokimg', 'ttimg']
 handler.group = true
-handler.register = true
+handler.register = false
 handler.coin = 2
 
 export default handler

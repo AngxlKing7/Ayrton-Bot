@@ -3,7 +3,7 @@ let users = {};
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     let [eleccion, cantidad] = text.split(' ');
     if (!eleccion || !cantidad) {
-        return m.reply(`${emoji} Por favor, elige cara o cruz y una cantidad de ${moneda} para apostar.\nEjemplo: *${usedPrefix + command} cara 50*`);
+        return m.reply(`${emoji} Por favor, elige cara o cruz y una cantidad de ${moneda} para apostar.\nEjemplo: *${usedPrefix + command} cara 5000*`);
     }
 
     eleccion = eleccion.toLowerCase();

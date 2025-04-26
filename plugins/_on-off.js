@@ -1,6 +1,6 @@
 const handler = async (m, { conn, args }) => {
   const comandos = [
-    'welcome', 'bv', 'bienvenida', 'antiprivado', 'antipriv', 'antiprivate',
+    'welcome', 'bienvenida', 'antiprivado', 'antipriv', 'antiprivate',
     'restrict', 'restringir', 'autolevelup', 'autonivel', 'autosticker',
     'antibot', 'antibots', 'autoaceptar', 'aceptarauto', 'autorechazar',
     'rechazarauto', 'autoresponder', 'autorespond', 'antisubbots', 'antisub',

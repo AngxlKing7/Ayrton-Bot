@@ -82,7 +82,7 @@ ${leerMas}
 > ✦ para recoger materiales oro y hierro
 `.trim()
 
-    let pp = 'https://files.catbox.moe/rt7ivf.jpg'
+    let pp = 'https://files.catbox.moe/ebr65k.jpg'
     await conn.sendFile(m.chat, pp, 'thumbnail.jpg', menuText, m)
 
   } catch (e) {

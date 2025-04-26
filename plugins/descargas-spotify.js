@@ -54,7 +54,7 @@ handler.help = ['spotify', 'music']
 handler.tags = ['downloader']
 handler.command = ['spotify', 'splay']
 handler.group = true
-handler.register = true
+handler.register = false
 
 export default handler
 

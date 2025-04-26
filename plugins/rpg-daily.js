@@ -1,5 +1,5 @@
 var handler = async (m, { conn }) => {
-    let coin = Math.floor(Math.random() * (500 - 100 + 1)) + 100;
+    let coin = Math.floor(Math.random() * (50000 - 10000 + 1)) + 100;
     let exp = Math.floor(Math.random() * (500 - 100 + 1)) + 100;
     let d = Math.floor(Math.random() * (500 - 100 + 1)) + 100;
 
@@ -12,12 +12,7 @@ var handler = async (m, { conn }) => {
     }
 
     global.db.data.users[m.sender].exp += exp;
-    conn.reply(m.chat, `${emoji} *Recompensa Diaria*
-
-Recursos:
-✨ Xp : *+${exp}*
-💎 Diamantes : *+${d}*
-💸 ${moneda} : *+${coin}*`, m);
+    conn.reply(m.chat, `「✿」Has reclamado tu recompensa diaria de *$${coin.toLocaleString()} Ayrton-Coins*!`, m);
 
     global.db.data.users[m.sender].lastclaim = Date.now();
 }
@@ -26,7 +21,7 @@ handler.help = ['daily', 'claim'];
 handler.tags = ['rpg'];
 handler.command = ['daily', 'diario'];
 handler.group = true;
-handler.register = true;
+handler.register = false;
 
 export default handler;
 

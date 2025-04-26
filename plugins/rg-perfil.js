@@ -44,7 +44,7 @@ let handler = async (m, { conn, args }) => {
     let partnerName = partner ? await conn.getName(partner) : 'Nadie';
 
     let profileText = `
-「👑」 *Perfil* ✰@${userId.split('@')[0]}✰
+「✿」 *Perfil* ◢@${userId.split('@')[0]}◤
 ${description}
 
 ✎ Edad » ${user.age || 'Desconocida'}
