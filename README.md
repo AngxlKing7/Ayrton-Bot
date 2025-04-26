@@ -25,7 +25,7 @@ Modo SubBot: Usa Ayrton-Bot como bot secundario (Jadibot) para mayor funcionalid
 Anti-Borrado: Nunca pierdas un mensaje con el seguimiento anti-eliminación.
 
 
-Nota: ZenithBot está en desarrollo activo. ¡Reporta cualquier problema al creador para una solución rápida!
+Nota: Ayrton-Bot en desarrollo activo. ¡Reporta cualquier problema al creador para una solución rápida!
 
 ### **`✧ Click en la imagen para descargar termux ✧`**
 <a
@@ -108,9 +108,12 @@ npm start
 ### **`🎮 Uso`**
 
 Envía #help - #menu para ver todos los comandos.
+
 Ejemplos:
 #sticker [imagen]: Convierte una imagen en sticker.
+
 #ytaudio [nombre de canción]: Descarga y envía una canción de YouTube.
+
 #pin [nombre]: Descarga y envia una foto de pinterest 
 
 
